@@ -40,7 +40,7 @@
 			}
 		
 			/* Conectando com o banco de dados para listar registros */
-			$datasource = 'mysql:host=127.0.0.1;dbname=benkyo_project';
+			$datasource = 'mysql:host=localhost;dbname=benkyo_project';
 			$user = 'root';
 			$pass = 'vertrigo';
 			$db = new PDO($datasource, $user, $pass);

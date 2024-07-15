@@ -5,7 +5,7 @@
     $telefone = $_POST['telefone'];
 
     # Conecta com BD
-    $ds = "mysql:host=127.0.0.1;dbname=benkyo_project";
+    $ds = "mysql:host=localhost;dbname=benkyo_project";
     $con = new PDO($ds, 'root', 'vertrigo');
 
     # Insere no BD
