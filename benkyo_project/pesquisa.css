@@ -1,0 +1,79 @@
+.box-center{
+  
+    /* border: solid white 2px; */
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) ;
+    
+}
+.box{
+    /* border: dotted black 2px; */
+    width: 500px;
+    min-height: 450px;
+    /* bottom: 0; */
+    /* position: absolute; */
+    background-color: lightblue;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.562);
+}
+.box2{
+    /* border: dotted black 2px; */
+    width: 295px;
+    height: 220px;
+    position: absolute;
+    background-color: lightblue;
+    border-radius: 10px;
+    /* box-shadow: 3px 3px rgba(0, 0, 0, 0.562); */
+}
+
+label{
+    width: 70px;
+    padding-bottom:15px ;
+    display: inline-block;
+}
+input{
+    border-radius: 5px;
+    border:solid black 1px ;
+    width: 200px;
+    height:20px;
+}
+body{
+    background-color: #292929;;
+    color: white;
+}
+
+
+table{
+    border-collapse: collapse ;
+    transform: translate(-50%,0%);
+    left: 50%;
+    position: absolute;
+    width: 400px;
+}
+
+
+th, td{
+    padding: 3px;
+}
+
+a{
+    color: rgb(28, 183, 255);
+    
+}
+#link{
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    
+}
+
+.pesquisa{
+    height: 50px;
+    width: fit-content;
+    /* border: 1px solid white; */
+    margin-left: auto;
+    margin-right: auto;
+}
