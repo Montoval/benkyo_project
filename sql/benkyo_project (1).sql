@@ -28,6 +28,8 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `calendario`
 --
 
+CREATE DATABASE benkyo_project();
+
 CREATE TABLE `calendario` (
   `calendario_id` int(50) NOT NULL,
   `ano` date NOT NULL,
