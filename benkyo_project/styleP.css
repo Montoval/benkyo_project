@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+}
+
+main{
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.menu{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.menu a{
+    font-size: 24px;
+    text-decoration: none;
+    display: block;
+    float: left;
+    width: 150px;
+    padding: 14px 20px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.menu a:hover{
+    color:black;
+    background-color: white;
+}
