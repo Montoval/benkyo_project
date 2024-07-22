@@ -35,13 +35,24 @@ main{
     background-color: white;
 }
 
-div{
-    display: grid;
-    place-items: center;
-    height: 1000px;
-    width: 1000px;
-    float: left;
+.container{     
+    height: 100%;
+    width: 100%;
+    /* float: left;
     justify-content: center;
+    display: flex; */
+    /* border: 5px solid black; */
     display: flex;
-    border: 5px solid black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 8px;
 }
