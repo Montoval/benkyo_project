@@ -12,7 +12,7 @@ main{
     top: 0px;
     left: 0px;
     width: 100%;
-    background-color: black;
+    background-color: lightblue;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -26,11 +26,33 @@ main{
     width: 150px;
     padding: 14px 20px;
     color: white;
-    background-color: black;
+    background-color: lightblue;
     text-align: center;
 }
 
 .menu a:hover{
     color:black;
     background-color: white;
+}
+
+.container{     
+    height: 100%;
+    width: 100%;
+    /* float: left;
+    justify-content: center;
+    display: flex; */
+    /* border: 5px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 8px;
 }
