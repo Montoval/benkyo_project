@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 19-Jul-2024 às 11:48
+-- Generation Time: 22-Jul-2024 às 12:17
 -- Versão do servidor: 5.7.25
 -- versão do PHP: 7.1.26
 
@@ -32,12 +32,10 @@ USE `benkyo_project`;
 
 CREATE TABLE `calendario` (
   `calendario_id` int(50) NOT NULL,
-  `ano` date NOT NULL,
-  `mes` date NOT NULL,
-  `dia` date NOT NULL,
   `usuario_id` int(50) NOT NULL,
   `titulo` varchar(255) NOT NULL,
-  `descricao` varchar(255) NOT NULL
+  `descricao` varchar(255) NOT NULL,
+  `data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
