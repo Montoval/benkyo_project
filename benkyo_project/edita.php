@@ -3,7 +3,7 @@
     $id = $_GET['id'];
 
     #Conecta com BD
-    $ds = "mysql:host=10.150.0.24;dbname=benkyo_project";
+    $ds = "mysql:host=localhost;dbname=benkyo_project";
     $con = new PDO($ds, 'root', 'vertrigo');
 
     #Buscar dados do registro
