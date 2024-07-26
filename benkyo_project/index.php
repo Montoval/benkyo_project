@@ -17,9 +17,9 @@
     <label>Nome: </label>
     <input name='nome' placeholder="Seu Nome"><br>
     <label>E-mail: </label>
-    <input name='email'placeholder="Seu E-mail"><br>
-    <label>Telefone: </label>
-    <input name='telefone'placeholder="Seu Telefone"><br>
+    <input name='email' type="text" id="email" placeholder="Seu E-mail"><br>
+    <label>Senha: </label>
+    <input name='senha' type="password" id="senha" placeholder="Sua Senha"><br>
     <button type='submit' >Salvar</button>
 </form>
 </div>
@@ -30,7 +30,7 @@
         <th>ID</th>
         <th>Nome</th>
         <th>E-mail</th>
-        <th>Telefone</th>
+        <th>Senha</th>
         <th>Ações</th>
     </tr>
 </div>
@@ -54,7 +54,7 @@
         echo "<td>" . $id . "</td>";
         echo "<td>" . $row['nome'] . "</td>";
         echo "<td>" . $row['email'] . "</td>";
-        echo "<td>" . $row['telefone'] . "</td>";
+        echo "<td>" . $row['senha'] . "</td>";
         echo "<td>
                 <a href='delete.php?id=$id'>Deletar</a>
                 |
