@@ -30,7 +30,6 @@
         <th>ID</th>
         <th>Nome</th>
         <th>E-mail</th>
-        <th>Senha</th>
         <th>Ações</th>
     </tr>
 </div>
@@ -54,7 +53,6 @@
         echo "<td>" . $id . "</td>";
         echo "<td>" . $row['nome'] . "</td>";
         echo "<td>" . $row['email'] . "</td>";
-        echo "<td>" . $row['senha'] . "</td>";
         echo "<td>
                 <a href='delete.php?id=$id'>Deletar</a>
                 |
