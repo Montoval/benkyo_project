@@ -1,7 +1,7 @@
 .box-center{
   
     /* border: solid white 2px; */
-    height: 300px;
+    height: 360px;
     width: 400px;
     position: absolute;
     left: 50%;
@@ -12,7 +12,7 @@
 .box{
     /* border: dotted black 2px; */
     width: 400px;
-    min-height: 260px;
+    min-height: 300px;
     /* bottom: 0; */
     /* position: absolute; */
     background-color: lightblue;

@@ -30,7 +30,6 @@
 			<tr>
 				<th>Nome</th>
 				<th>Email</th>
-				<th>Telefone</th>
 				<th>Ações</th>
 			</tr>
 		<?php
@@ -54,12 +53,10 @@
 					$id = $row['id'];
 					$nome = $row['nome'];
 					$email = $row['email'];
-					$telefone= $row['telefone'];
-	
+						
 					print "<tr>
 					<td>$nome</td>
 					<td>$email</td>
-					<td>$telefone</td>
 					<td><a href='delete.php?id=$id'>Excluir</a> | 	
 					<a href='edita.php?id=$id'>Editar</a></td>
 					</tr>";					
