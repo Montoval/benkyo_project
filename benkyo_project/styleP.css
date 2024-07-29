@@ -4,22 +4,25 @@ body{
 }
 
 main{
-    margin-top: 30px;
-    padding: 20px;
+    /* margin-top: 30px; */
+    /* padding: 20px; */
 }
 
-.menu{
+.menu-fixo{
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
+    /* min-height: 40px; */
     width: 100%;
+    /* display: flex; */
     background-color: lightblue;
     justify-content: center;
-    display: flex;
+    /* display: flex; */
     align-items: center;
+    z-index: 1;
 }
 
-.menu a{
+.menu-fixo a{
     font-size: 24px;
     text-decoration: none;
     display: block;
@@ -31,32 +34,39 @@ main{
     text-align: center;
 }
 
-.menu a:hover{
+.menu-fixo a:hover{
     color:black;
     background-color: white;
 }
 
 .container{     
+    margin-top: 800px;
     height: 100%;
     width: 100%;
+    position: relative;
     /* float: left;
     justify-content: center;
     display: flex; */
     /* border: 5px solid black; */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .box{
+    margin-top: ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     width: 80%;
     height: 1500px;
     background-color: white;
     /* border: 2px solid black; */
     box-shadow: 2px 2px 8px black;
     border-radius: 10px;
-    margin-top: 8px;
+    
 }
 
 /* .menuP{
@@ -86,18 +96,21 @@ main{
   min-height: 100vh;
 } */
 
-.footer {
-  position: relative;
+.footer-fix {
+  float: left;
+    position: fixed;
+  border-top: 1px solid #333;
+  bottom: 0;
   width: 100%;
   background: #3586ff;
-  min-height: 100px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transform: translate(0%, 635%);
-  border-radius: 10px;
+  
+  /* padding: 20px 50px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* transform: translate(0%, 635%); */
+  /* border-radius: 10px; */
 }
 
 .social-icon,
