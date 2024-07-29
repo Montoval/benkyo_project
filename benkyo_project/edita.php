@@ -40,8 +40,8 @@
                     <input name="email" value="<?php print $email ?>"><br>
                     <label>Senha Atual:</label>
                     <input type="password" name="senha_atual" required><br>
-                    <label>Nova Senha (deixe em branco para não alterar):</label>
-                    <input type="password" name="nova_senha"><br>
+                    <label>Nova Senha:</label>
+                    <input type="password"placeholder="Deixe em branco para não alterar"name="nova_senha"><br>
                     <button type="submit">Atualizar</button>
                 </form>
             </div>    
