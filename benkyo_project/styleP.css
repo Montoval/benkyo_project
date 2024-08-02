@@ -17,9 +17,10 @@ main{
     /* display: flex; */
     background-color: lightblue;
     justify-content: center;
-    /* display: flex; */
+    display: flex;
     align-items: center;
     z-index: 1;
+    box-shadow: #333 0px 3px 10px;
 }
 
 .menu-fixo a{
@@ -40,7 +41,7 @@ main{
 }
 
 .container{     
-    margin-top: 800px;
+    margin-top: 825px;
     height: 100%;
     width: 100%;
     position: relative;
@@ -216,4 +217,3 @@ main{
     background-positon-x: 0px;
   }
 }
-aaa
