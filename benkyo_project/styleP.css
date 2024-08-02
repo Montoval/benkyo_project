@@ -1,11 +1,10 @@
 body{
     margin: 0;
     background-color: lightcyan;
-}
-
-main{
-    /* margin-top: 30px; */
-    /* padding: 20px; */
+    background-image: url(imagens/lofigirl.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .menu-fixo{
@@ -63,12 +62,33 @@ main{
     transform: translate(-50%,-50%);
     width: 80%;
     height: 1500px;
-    background-color: white;
+    background-color:rgba(255, 255, 255, 0.678);
     /* border: 2px solid black; */
     box-shadow: 2px 2px 8px black;
     border-radius: 10px;
-    
 }
+
+.sugestoes{
+  height: 250px;
+  width: 100%;
+  background-color: rgba(43, 43, 43, 0.938);
+  box-shadow: 2px 2px 8px black;
+  border-radius: 10px;
+}
+
+#sugestoes_text{
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+h1{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
 
 /* .menuP{
     width: 1000px;
