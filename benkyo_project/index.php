@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Benkyo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="imagens/Benkyoicon2.jpg">
 </head>
 <body>
     <div class="box-center">

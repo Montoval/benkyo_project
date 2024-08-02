@@ -55,7 +55,7 @@ main{
 }
 
 .box{
-    margin-top: ;
+    /*margin-top: ;*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -216,4 +216,3 @@ main{
     background-positon-x: 0px;
   }
 }
-aaa
