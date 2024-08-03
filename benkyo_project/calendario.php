@@ -2,16 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Perfil</title>
+    <title>Calendário</title>
     <link rel="stylesheet" href="styleP.css">
     <link rel="icon" type="image/x-icon" href="imagens/Benkyoicon2.jpg">
 </head>
 <body>
     <nav class="menu-fixo">
         <a href="principal.html" class="active">Inicio</a>
-        <a href="calendario.html">Calendário</a>
-        <a href="atividades.html">Atividades</a>
-        <a href="perfil.html">Perfil</a>
+        <a href="calendario.php">Calendário</a>
+        <a href="atividades.php">Atividades</a>
+        <a href="perfil.php">Perfil</a>
     </nav>
     <main>
         <div class="container">
@@ -20,8 +20,7 @@
 
                   <div class="sugestoes">
                     <h1>Sugestões</h1>
-                    <p id="sugestoes_text">Fazer aqui o perfil do usuario, para que ele possar alterar alguma informação dele
-                    </p>
+                    <p id="sugestoes_text">Aqui vai ser o Calendário de eventos do usuário </p>
                   </div>
                 </div>
                 

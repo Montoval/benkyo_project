@@ -9,9 +9,9 @@
 <body>
     <nav class="menu-fixo">
         <a href="principal.html" class="active">Inicio</a>
-        <a href="calendario.html">Calendário</a>
-        <a href="atividades.html">Atividades</a>
-        <a href="perfil.html">Perfil</a>
+        <a href="calendario.php">Calendário</a>
+        <a href="atividades.php">Atividades</a>
+        <a href="perfil.php">Perfil</a>
     </nav>
     <main>
         <div class="container">
