@@ -6,6 +6,10 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+p{
+  padding: 5px;
+  color: white;
+}
 
 .menu-fixo{
     position: fixed;
@@ -71,9 +75,11 @@ body{
 .sugestoes{
   height: 250px;
   width: 100%;
-  background-color: rgba(43, 43, 43, 0.938);
+  /* background-color: rgba(43, 43, 43, 0.938); */
+  background-color: rgba(71, 50, 71, 0.808);
   box-shadow: 2px 2px 8px black;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 #sugestoes_text{
@@ -83,16 +89,45 @@ body{
   margin-left: 20px;
 }
 
+
 h1{
   color: white;
   font-size: 30px;
   text-align: center;
 }
 
+.sugestoes-box{
+  height: 700px;
+  width: 99%;
+  margin: 0 auto;
+  display: flex;
+  border: 3px solid rgba(255, 255, 255, 0.822);
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
+  background-color: rgba(115, 55, 255, 0.205);
+}
+
+.curso1{
+  text-align: justify;
+  height: 50%;
+  width: 33%;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: rgba(0, 128, 0, 0.486);
+}
+.curso1, a{
+  color: rgb(0, 255, 0);
+}
+.curso1, a:hover{
+  color: rgb(222, 194, 255);
+  transition: 0.5s;
+  font-size: 1.1em;
+}
+
 
 /* .menuP{
-    width: 1000px;
-    height: 150px;
+  width: 1000px;
+  height: 150px;
     background-color: light;
     border: solid black 2px;
     border-radius: 10px;
