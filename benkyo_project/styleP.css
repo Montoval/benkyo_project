@@ -107,19 +107,60 @@ h1{
   background-color: rgba(115, 55, 255, 0.205);
 }
 
-.curso1{
-  text-align: justify;
+#sugestoes-row1{
+  border: 1px solid black;
   height: 50%;
-  width: 33%;
+  width: 100%;
+}
+
+#sugestoes-row2{
+  height: 50%;
+  width: 100%;
+}
+
+.curso1{
+  float: left;
+  text-align: justify;
+  height: 100%;
+  width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
   background-color: rgba(0, 128, 0, 0.486);
 }
+.curso2{
+  float: left;
+  text-align: justify;
+  height: 100%;
+  width: 33.333%;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: rgba(0, 66, 128, 0.486);
+}
+.curso3{
+  float: left;
+  text-align: justify;
+  height: 100%;
+  width: 33.333%;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: rgba(113, 0, 128, 0.486);
+}
+.curso4{
+  text-align: justify;
+  bottom: 0;
+  height: 100%;
+  width: 33.333%;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: rgba(128, 0, 0, 0.486);
+}
+
+
 .curso1, a{
   color: rgb(0, 255, 0);
 }
 .curso1, a:hover{
-  color: rgb(222, 194, 255);
+  color: rgb(138, 255, 138);
   transition: 0.5s;
   font-size: 1.1em;
 }
