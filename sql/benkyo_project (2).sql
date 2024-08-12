@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 22-Jul-2024 às 14:38
+-- Generation Time: 12-Ago-2024 às 11:23
 -- Versão do servidor: 5.7.25
 -- versão do PHP: 7.1.26
 
@@ -30,6 +30,7 @@ USE `benkyo_project`;
 -- Estrutura da tabela `atividade`
 --
 
+DROP TABLE IF EXISTS `atividade`;
 CREATE TABLE `atividade` (
   `idAtividade` int(11) NOT NULL,
   `descricaoAtividade` varchar(255) NOT NULL,
@@ -42,6 +43,7 @@ CREATE TABLE `atividade` (
 -- Estrutura da tabela `evento`
 --
 
+DROP TABLE IF EXISTS `evento`;
 CREATE TABLE `evento` (
   `idEvento` int(11) NOT NULL,
   `idUsuario` int(11) NOT NULL,
@@ -57,11 +59,12 @@ CREATE TABLE `evento` (
 -- Estrutura da tabela `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `senha` varchar(25) NOT NULL
+  `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -70,7 +73,11 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
 (15, 'joao victor', 'malfoy2@gmail.com', ''),
-(17, 'matheus', 'matheus@gmail.com', '');
+(17, 'matheus', 'matheus@gmail.com', ''),
+(18, 'kawai', 'Vitor@gmail.com', '123456'),
+(19, 'issao', 'isso@gmail.com', 'd34ba032a189ceec51ad9b075f49c3cd'),
+(20, 'Ryu Miwa', 'Ryu@gmail.com', 'abd842f884d55ac9acc4816e458738b9'),
+(21, 'limas', 'turbo@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Indexes for dumped tables
@@ -116,7 +123,7 @@ ALTER TABLE `evento`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Constraints for dumped tables
