@@ -191,61 +191,15 @@ p{
 
 
 .curso1, a{
-  color: rgb(0, 255, 0);
+  /* color: rgb(0, 255, 0); */
+  color: black;
 }
 .curso1, a:hover{
-  color: rgb(138, 255, 138);
+  /* color: rgb(138, 255, 138); */
+  color: black;
   transition: 0.5s;
   font-size: 1.1em;
 }
-
-.curso2, a{
-  color: #24a0bfbd;
-}
-.curso2, a:hover{
-  color: #24a0bfbd;
-  transition: 0.5s;
-  font-size: 1.1em;
-}
-
-.curso3, a{
-  color: #6C6AA6bd;
-}
-.curso3, a:hover{
-  color: #6C6AA6bd;
-  transition: 0.5s;
-  font-size: 1.1em;
-}
-
-.curso4, a{
-  color: #F25050bd;
-}
-.curso4, a:hover{
-  color:  #F25050bd;
-  transition: 0.5s;
-  font-size: 1.1em;
-}
-
-.curso5, a{
-  color:  #F2911Bbd;
-}
-.curso5, a:hover{
-  color:  #F2911Bbd;
-  transition: 0.5s;
-  font-size: 1.1em;
-}
-
-.curso6, a{
-  color:  #FF81D0bd;
-}
-.curso6, a:hover{
-  color: #FF81D0bd;
-  transition: 0.5s;
-  font-size: 1.1em;
-}
-
-
-
 
 /* .menuP{
   width: 1000px;
