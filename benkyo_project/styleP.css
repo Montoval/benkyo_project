@@ -104,6 +104,9 @@ h1{
   border-radius: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
   background-color: rgba(115, 55, 255, 0.205);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 #sugestoes-row1{
