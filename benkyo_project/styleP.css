@@ -104,6 +104,9 @@ h1{
   border-radius: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
   background-color: rgba(115, 55, 255, 0.205);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 #sugestoes-row1{
@@ -126,7 +129,8 @@ h1{
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: rgba(0, 128, 0, 0.486);
+  /* background-color: rgba(0, 128, 0, 0.486); */
+  background-color: #44a666bd;
 }
 .curso2{
   float: left;
@@ -135,7 +139,8 @@ h1{
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: rgba(0, 66, 128, 0.486);
+  background-color: #24a0bfbd;
+  /* background-color: rgba(0, 66, 128, 0.486); */
 }
 .curso3{
   float: left;
@@ -144,7 +149,8 @@ h1{
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: rgba(113, 0, 128, 0.486);
+  background-color: #6C6AA6bd;
+  /* background-color: rgba(113, 0, 128, 0.486); */
 }
 .curso4{
   float: left;
@@ -154,7 +160,8 @@ h1{
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: rgba(128, 0, 0, 0.486);
+  background-color: #F25050bd;
+  /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .curso5{
   float: left;
@@ -163,7 +170,8 @@ h1{
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: rgba(128, 0, 0, 0.486);
+  background-color: #F2911Bbd;
+  /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .curso6{
   float: left;
@@ -173,7 +181,8 @@ h1{
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: rgba(128, 0, 0, 0.486);
+  background-color: #FF81D0bd;
+  /* background-color: rgba(128, 0, 0, 0.486); */
 }
 
 
