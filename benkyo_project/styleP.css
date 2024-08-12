@@ -122,6 +122,10 @@ h1{
   width: 100%;
 }
 
+p{
+  text-align: justify;
+}
+
 .curso1{
   float: left;
   text-align: justify;
@@ -187,15 +191,23 @@ h1{
 
 
 .curso1, a{
-  color: rgb(0, 255, 0);
+  /* color: rgb(0, 255, 0); */
+  color: black;
 }
 .curso1, a:hover{
-  color: rgb(138, 255, 138);
+  /* color: rgb(138, 255, 138); */
+  color: black;
   transition: 0.5s;
   font-size: 1.1em;
 }
 
-
+.complementar{
+  width: 500px;
+  height: 300px;
+  background-color: black;
+  position: absolute;
+  justify-content: center;
+}
 /* .menuP{
   width: 1000px;
   height: 150px;
@@ -212,7 +224,7 @@ h1{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 /* body {
