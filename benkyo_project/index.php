@@ -12,6 +12,8 @@
     <a href='index.php'>Inicial</a> 
 		|
 		<a href='pesquisa.php'>Pesquisa</a>
+        |
+		<a href='login.php'>Voltar</a>
 		<br>
 <h3 align="center">Cadastro de Usuário</h3>
 <form method='POST' action='inserir.php'>

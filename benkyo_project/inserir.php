@@ -2,7 +2,7 @@
     // Recebe dados do FORM
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $senha = MD5($_POST['senha']);
+    $senha = $_POST['senha'];
 
     try {
         // Conecta com BD
@@ -29,7 +29,30 @@
                 window.location.href='index.php';
                 </script>";
                 die();
-            } else {
+            } 
+        }
+         // Verifica se o usuario já existe
+         $query_select = "SELECT nome FROM usuario WHERE nome = :nome";
+         $stm = $con->prepare($query_select);
+         $stm->bindParam(':nome', $nome);
+         $stm->execute();
+         $result = $stm->fetch(PDO::FETCH_ASSOC);
+ 
+         if ($nome == "" || $nome == null) {
+             echo "<script>
+                 alert('O campo nome deve ser preenchido');
+                 window.location.href='index.php';
+                 </script>";
+         } else {
+           
+             if ($result) {
+                 echo "<script>
+                 alert('Esse nome já existe');
+                 window.location.href='index.php';
+                 </script>";
+                 die();
+             }
+            }
                 // Insere no BD
                 $sql = "INSERT INTO usuario (nome, email, senha) VALUES(?, ?, ?)";
                 $stm = $con->prepare($sql);
@@ -39,11 +62,9 @@
                 if ($stm) {
                     header("Location: index.php");
                 } else {
-                    echo "<p>Erro ao inserir</p>";
-                }
+                    echo "<p>Erro ao inserir</p>";                }
             }
-        }
-    } catch (PDOException $e) {
+    catch (PDOException $e) {
         echo 'Erro: ' . $e->getMessage();
     }
 ?>
