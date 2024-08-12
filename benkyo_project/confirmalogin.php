@@ -3,8 +3,8 @@
 session_start();
 
 // Pegando os dados de login enviados.
-$username = $_POST['usuario'];
-$usersenha = $_POST['senha'];
+$nome = $_POST['username'];
+$senha = $_POST['usersenha'];
 
 /* Conectando com o banco de dados para cadastrar registros */
 $datasource = 'mysql:host=localhost;dbname=benkyo_project';
@@ -14,18 +14,18 @@ $db = new PDO($datasource, $user, $pass);
 	
 $query = "SELECT * FROM usuario WHERE nome=? AND senha=?";
 $stm = $db->prepare($query);
-$stm->bindParam(1, $username);
-$stm->bindParam(2, $usersenha);
+$stm->bindParam(1, $nome);
+$stm->bindParam(2, $senha);
 $stm->execute();
 
 if ($stm -> fetch()) {
 	// Login efetuado com sucesso.
 
 	// Armazenando usu�rio na sess�o.
-	$_SESSION['user'] = $username;
+	$_SESSION['user'] = $nome;
 	
 	// Redirecionando para a p�gina inicial.
-	header("location:index.php");
+	header("location:principal.html");
 } else {
 	// Caso usu�rio ou senha estejam incorretos.
 	print "<p>Usuário e/ou Senha Inválidos!</p>";
