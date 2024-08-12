@@ -121,10 +121,10 @@ h1{
   height: 50%;
   width: 100%;
 }
-
+/* 
 p{
   text-align: justify;
-}
+} */
 
 .curso1{
   float: left;
@@ -204,9 +204,13 @@ p{
 .complementar{
   width: 500px;
   height: 300px;
-  background-color: black;
-  position: absolute;
-  justify-content: center;
+  border: 1px solid black;
+  /* background-color: black; */
+  /* align-items:center; */
+  text-align: center;
+  margin: auto;
+  /* position: absolute; */
+  /* justify-content: center; */
 }
 /* .menuP{
   width: 1000px;
