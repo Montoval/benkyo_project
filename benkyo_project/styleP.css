@@ -122,6 +122,10 @@ h1{
   width: 100%;
 }
 
+p{
+  text-align: justify;
+}
+
 .curso1{
   float: left;
   text-align: justify;
@@ -195,6 +199,53 @@ h1{
   font-size: 1.1em;
 }
 
+.curso2, a{
+  color: #24a0bfbd;
+}
+.curso2, a:hover{
+  color: #24a0bfbd;
+  transition: 0.5s;
+  font-size: 1.1em;
+}
+
+.curso3, a{
+  color: #6C6AA6bd;
+}
+.curso3, a:hover{
+  color: #6C6AA6bd;
+  transition: 0.5s;
+  font-size: 1.1em;
+}
+
+.curso4, a{
+  color: #F25050bd;
+}
+.curso4, a:hover{
+  color:  #F25050bd;
+  transition: 0.5s;
+  font-size: 1.1em;
+}
+
+.curso5, a{
+  color:  #F2911Bbd;
+}
+.curso5, a:hover{
+  color:  #F2911Bbd;
+  transition: 0.5s;
+  font-size: 1.1em;
+}
+
+.curso6, a{
+  color:  #FF81D0bd;
+}
+.curso6, a:hover{
+  color: #FF81D0bd;
+  transition: 0.5s;
+  font-size: 1.1em;
+}
+
+
+
 
 /* .menuP{
   width: 1000px;
@@ -212,7 +263,7 @@ h1{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 /* body {
