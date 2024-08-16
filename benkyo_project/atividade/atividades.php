@@ -42,8 +42,8 @@ $atividades = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <td><?= htmlspecialchars($atividade['descricaoAtividade']) ?></td>
             <td><?= htmlspecialchars($atividade['tipoAtividade']) ?></td>
             <td>
-                <a href="edit.php?id=<?= $atividade['idAtividade'] ?>">Editar</a>
-                <a href="delete.php?id=<?= $atividade['idAtividade'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
+                <a href="atividade/edit.php?id=<?= $atividade['idAtividade'] ?>">Editar</a>
+                <a href="atividade/delete.php?id=<?= $atividade['idAtividade'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
             </td>
         </tr>
         <?php endforeach; ?>

@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':tipoAtividade', $tipoAtividade);
     $stmt->execute();
 
-    header("Location: index.php");
+    header("Location: atividades.php");
     exit();
 }
 ?>
