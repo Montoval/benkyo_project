@@ -19,9 +19,18 @@
                 <div class="menuP">
 
                   <div class="sugestoes">
-                    <h1>Sugestões</h1>
-                    <p id="sugestoes_text">Vamo fazer uma parada para os usuarios criarem a sua atividade para depois adicionar no calendario </p>
+                   
+                    <?php
+                    include "atividade/atividades.php";
+                    ?>
                   </div>
+                  
+              <?php
+           
+              include "atividade/create.php";
+      
+              include "atividade/edit.php";
+              ?>
                 </div>
                 
                 <footer class="footer-fix">
