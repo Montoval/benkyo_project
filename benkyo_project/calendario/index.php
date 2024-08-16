@@ -1,5 +1,5 @@
 <?php
-$mysqli = new PDO("mysql:host=localhost;dbname=teste", "root", "vertrigo");
+$mysqli = new PDO("mysql:host=localhost;dbname=benkyo_project", "root", "vertrigo");
 
 // Verifica conexão
 /*if ($mysqli->connect_error) {
