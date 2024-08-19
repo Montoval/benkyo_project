@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Perfil</title>
-    <link rel="stylesheet" href="calendario.css">
+    <link rel="stylesheet" href="styleP.css">
     <link rel="icon" type="image/x-icon" href="imagens/Benkyoicon2.jpg">
 </head>
 <body>
@@ -61,8 +61,6 @@
                   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             </div>
         </div>
-        
-
     </main>
 </body>
 </html>

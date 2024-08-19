@@ -73,14 +73,15 @@ $events = getEvents($mysqli, $month, $year);
         td{
             width: 40px;
             height: 15px;
-            transition: background-color 1s, width 1s, height 1s;
+            transition: scale 1s;
         }
         
         td:hover{
             background-color: lightgrey;
-            rotate: 360deg;
-            width: 70px;
-            height: 45px;
+            /*rotate: 360deg;*/
+            /*width: 70px;
+            height: 45px;*/
+            scale: 1.2;
             box-shadow: 5px 5px 4px black;
         }
     </style>
