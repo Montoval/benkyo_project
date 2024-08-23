@@ -1,5 +1,5 @@
 <?php
-$mysqli = new PDO("mysql:host=localhost;dbname=teste", "root", "vertrigo");
+$mysqli = new PDO("mysql:host=localhost;dbname=benkyo_project", "root", "vertrigo");
 
 // Verifica conexão
 if (!$mysqli) {
@@ -42,13 +42,13 @@ $result = $mysqli->query($query);
         <?php 
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $data = htmlspecialchars($row['event_date']);
-            $titulo = htmlspecialchars($row['event_title']);
-            $descricao = htmlspecialchars($row['event_description']);
+            $local = htmlspecialchars($row['event_local']);
+            $hora = htmlspecialchars($row['event_hora']);
 
             echo "<tr>
                     <td>$data</td>
-                    <td>$titulo</td>
-                    <td>$descricao</td>
+                    <td>$local</td>
+                    <td>$hora</td>
                   </tr>";
         }
         ?>

@@ -125,8 +125,8 @@ $events = getEvents($mysqli, $month, $year);
                     echo $day_counter;
                     if (isset($events[$date])) {
                         foreach ($events[$date] as $event) {
-                            echo "<div class='event'>{$event['event_title']}
-                                    <div class='event-details'>{$event['event_description']}</div>
+                            echo "<div class='event'>{$event['event_local']}
+                                    <div class='event-details'>{$event['event_hora']}</div>
                                   </div>";
                         }
                     }
@@ -142,15 +142,15 @@ $events = getEvents($mysqli, $month, $year);
         ?>
     </table>
     <h2>Adicionar Evento</h2>
-    <form action="add_event.php" method="post">
+    <form action="calendario/add_event.php" method="post">
         <label for="event_date">Data:</label>
         <input type="date" id="event_date" name="event_date" required>
-        <label for="event_title">Título:</label>
-        <input type="text" id="event_title" name="event_title" required>
-        <label for="event_description">Descrição:</label>
-        <textarea id="event_description" name="event_description" required></textarea>
+        <label for="event_local">Local:</label>
+        <input type="text" id="event_local" name="event_local" required>
+        <label for="event_hora">Hora:</label>
+        <input type="time" id="event_hora" name="event_hora" required></input>
         <button type="submit">Adicionar Evento</button>
     </form>
-    <button onclick="window.location.href='all_events.php'">Ver Todos os Eventos</button>
+    <button onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
 </body>
 </html>

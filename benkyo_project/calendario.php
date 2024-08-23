@@ -26,6 +26,7 @@
                 </div>
                 <?php
                     include "calendario/index.php";
+              
                 ?>
                 <footer class="footer-fix">
                     <div class="waves">
