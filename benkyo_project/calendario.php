@@ -18,11 +18,7 @@
             <div class="box">
                 <div class="menuP">
 
-                  <div class="sugestoes">
-                    <h1>Sugestões</h1>
-                    <p id="sugestoes_text">Fazer aqui o calendario, para que ele possa adicionar coisas
-                    </p>
-                  </div>
+                  
                 </div>
                 <?php
                     include "calendario/index.php";

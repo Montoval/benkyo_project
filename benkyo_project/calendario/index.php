@@ -34,6 +34,7 @@ $events = getEvents($mysqli, $month, $year);
             display: table;
             width: 100%;
             border-collapse: collapse;
+            background-color: rgba(255,255,255,0.8);
         }
         .calendar th, .calendar td {
             border: 1px solid #ddd;
@@ -74,6 +75,7 @@ $events = getEvents($mysqli, $month, $year);
             width: 40px;
             height: 15px;
             transition: scale 1s;
+            
         }
         
         td:hover{
@@ -82,7 +84,7 @@ $events = getEvents($mysqli, $month, $year);
             /*width: 70px;
             height: 45px;*/
             scale: 1.2;
-            box-shadow: 5px 5px 4px black;
+            /* box-shadow: 5px 5px 4px black; */
         }
     </style>
     <script>
