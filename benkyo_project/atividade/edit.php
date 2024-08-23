@@ -3,7 +3,12 @@ include 'db.php';
 
 $idAtividade = $_GET['id'];
 
+<<<<<<< HEAD
+
+$query = "SELECT * FROM Atividade WHERE idAtividade = :idAtividade";
+=======
 $query = "SELECT * FROM atividade WHERE idAtividade = :idAtividade";
+>>>>>>> e6c7e2a73b8840839661a9f41efdcd8c81aee6fb
 $stmt = $pdo->prepare($query);
 $stmt->bindParam(':idAtividade', $idAtividade);
 $stmt->execute();
