@@ -24,6 +24,7 @@ $atividades = $stmt->fetchAll(PDO::FETCH_ASSOC);
         th {
             background-color: #f2f2f2;
         }
+        
     </style>
 </head>
 <body>
