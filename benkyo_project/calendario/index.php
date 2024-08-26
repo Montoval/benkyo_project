@@ -86,6 +86,45 @@ $events = getEvents($mysqli, $month, $year);
             scale: 1.2;
             /* box-shadow: 5px 5px 4px black; */
         }
+
+        .box-eventos{
+            border-radius: 15px;
+            margin-top:30px;
+            margin-left: auto;
+            margin-right: auto;
+            /* width: fit-content; */
+            height: fit-content;
+            background-color: rgba(0,0,0,0.5);
+            border-collapse: collapse;
+            align-items: center;
+        }
+
+        label{
+            width:40px;
+            display:inline-block;
+
+        }
+
+        .box-eventos {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+        .input-eventos{
+            border-radius: 10px;
+            width: 90%;
+            border-collapse: collapse;
+            /* display: inline-block; */
+
+        }
+
+        button{
+            border-collapse: collapse;
+            border: 5px;
+        }
+
+        
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -143,7 +182,9 @@ $events = getEvents($mysqli, $month, $year);
         }
         ?>
     </table>
+    <div class="box-eventos">
     <h2>Adicionar Evento</h2>
+<<<<<<< HEAD
     <h2>Pesquisa de Contatos</h2>
 		<form method="post" action="index.php">
 			<label>Nome parcial:</label>
@@ -187,14 +228,18 @@ $events = getEvents($mysqli, $month, $year);
 		?>
     <form action="calendario/add_event.php" method="post">
         <input type="hidden" id="atividade_id" name="atividade_id">
+=======
+    <form action="calendario/add_event.php" method="post"> 
+>>>>>>> d2489aa97c216d0f2536e4e289df473a8a8ecd77
         <label for="event_date">Data:</label>
-        <input type="date" id="event_date" name="event_date" required>
+        <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br>
         <label for="event_local">Local:</label>
-        <input type="text" id="event_local" name="event_local" required>
+        <input type="text" id="event_local" class="input-eventos"  name="event_local" required><br>
         <label for="event_hora">Hora:</label>
-        <input type="time" id="event_hora" name="event_hora" required></input>
+        <input type="time" id="event_hora" class="input-eventos"  name="event_hora" required></input><br>
         <button type="submit">Adicionar Evento</button>
     </form>
     <button onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
+    </div>
 </body>
 </html>
