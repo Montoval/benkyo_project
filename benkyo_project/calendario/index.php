@@ -144,7 +144,49 @@ $events = getEvents($mysqli, $month, $year);
         ?>
     </table>
     <h2>Adicionar Evento</h2>
+    <h2>Pesquisa de Contatos</h2>
+		<form method="post" action="index.php">
+			<label>Nome parcial:</label>
+			<input type="text" name="nome" />
+			<button type="submit">Pesquisar</button>
+		</form>
+
+		<h2>Listagem de Contatos</h2>
+		<?php
+			$nome = '';
+			if (isset($_POST['nome'])){
+				$nome = $_POST['nome'];
+			}
+		
+			/* Conectando com o banco de dados para listar registros */
+			$datasource = 'mysql:host=localhost;dbname=benkyo_project';
+			$user = 'root';
+			$pass = 'vertrigo';
+			$db = new PDO($datasource, $user, $pass);
+	
+			$query = "SELECT * FROM atividade WHERE idAtividade LIKE '%$id%'";
+			$stm = $db -> prepare($query);
+			
+			if ($stm -> execute()) {
+				
+							
+				while ($row = $stm -> fetch()) {
+					$id = $row['contatoid'];
+					$nome = $row['nome'];
+					
+	
+					print "<tr>
+								<td>$nome</td>								
+								<td><button>Selecionar<button></td>
+							</tr>";				
+				}
+				print "</table>";
+			} else {
+				print '<p>Erro ao listar!</p>';
+			}
+		?>
     <form action="calendario/add_event.php" method="post">
+        <input type="hidden" id="atividade_id" name="atividade_id">
         <label for="event_date">Data:</label>
         <input type="date" id="event_date" name="event_date" required>
         <label for="event_local">Local:</label>
