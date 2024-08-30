@@ -29,7 +29,7 @@ $atividades = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     <h1>Gerenciar Atividades</h1>
-    <a href="create.php">Adicionar Atividade</a>
+   
     <table>
         <tr>
             <th>ID</th>

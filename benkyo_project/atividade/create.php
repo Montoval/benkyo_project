@@ -1,17 +1,27 @@
 <?php
 include 'db.php';
+session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $descricaoAtividade = $_POST['descricaoAtividade'];
-    $tipoAtividade = $_POST['tipoAtividade'];
+if (isset($_SESSION['user_id'])) {
+    $idUsuario = $_SESSION['user_id'];
 
-    $query = "INSERT INTO Atividade (descricaoAtividade, tipoAtividade) VALUES (:descricaoAtividade, :tipoAtividade)";
-    $stmt = $pdo->prepare($query);
-    $stmt->bindParam(':descricaoAtividade', $descricaoAtividade);
-    $stmt->bindParam(':tipoAtividade', $tipoAtividade);
-    $stmt->execute();
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $descricaoAtividade = $_POST['descricaoAtividade'];
+        $tipoAtividade = $_POST['tipoAtividade'];
 
-    header("Location: atividades.php");
+        $query = "INSERT INTO Atividade (idUsuario, descricaoAtividade, tipoAtividade) VALUES (:idUsuario, :descricaoAtividade, :tipoAtividade)";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(':idUsuario', $idUsuario);
+        $stmt->bindParam(':descricaoAtividade', $descricaoAtividade);
+        $stmt->bindParam(':tipoAtividade', $tipoAtividade);
+        $stmt->execute();
+
+        header("Location: atividades.php");
+        exit();
+    }
+} else {
+    // Redirecionar para a página de login se o usuário não estiver logado
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -22,20 +32,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Adicionar Atividade</title>
     <style>
-
         .box-atividades{   
             height:fit-content;
             width:fit-content;
-            
             background-color: rgba(0, 0, 0, 0.4);
         }
     </style>
 </head>
 <body>
     <div class="box-atividades">
-
-    <h1>Adicionar Atividade</h1>
-    <form method="post">
+        <h1>Adicionar Atividade</h1>
+        <form method="post">
             <label for="descricaoAtividade">Descrição:</label>
             <input type="text" id="descricaoAtividade" name="descricaoAtividade" required><br>
             <label for="tipoAtividade">Tipo:</label>
@@ -46,9 +53,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <option value="Outros">Outros</option>
             </select>
             <button type="submit">Adicionar</button>
-    </form>
+        </form>
         <a href="atividades.php">Voltar</a>
-
     </div>
 </body>
 </html>

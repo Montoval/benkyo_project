@@ -1,3 +1,25 @@
+<?php
+session_start();
+
+// Verifique se o usuário está logado
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php'); // Redireciona para a página de login se não estiver logado
+    exit();
+}
+
+// Conecte-se ao banco de dados
+$pdo = new PDO('mysql:host=localhost;dbname=benkyo_project', 'root', 'vertrigo');
+
+// Obtenha as informações do usuário
+$user_id = $_SESSION['user_id'];
+$query = "SELECT * FROM usuario WHERE id = ?";
+$stmt = $pdo->prepare($query);
+$stmt->execute([$user_id]);
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,50 +39,58 @@
         <div class="container">
             <div class="box">
                 <div class="menuP">
-
-                  <div class="sugestoes">
-                    <h1>Sugestões</h1>
-                    <p id="sugestoes_text">Fazer aqui o perfil do usuario, para que ele possar alterar alguma informação dele
-                    </p>
-                  </div>
+                    <div class="sugestoes">
+                        <h1>Perfil do Usuário</h1>
+                        <p><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></p>
+                        <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
+                    
+                    </div>
+                    <div class="sugestoes">
+                        <h1>Editar Perfil</h1>
+                        <form action="updateperfil.php" method="post">
+                            <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user['id']); ?>">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($user['nome']); ?>" required><br>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required><br>
+                            <button type="submit">Atualizar</button>
+                        </form>
+                    </div>
                 </div>
                 
                 <footer class="footer-fix">
                     <div class="waves">
-                      <div class="wave" id="wave1"></div>
-                      <div class="wave" id="wave2"></div>
-                      <div class="wave" id="wave3"></div>
-                      <div class="wave" id="wave4"></div>
+                        <div class="wave" id="wave1"></div>
+                        <div class="wave" id="wave2"></div>
+                        <div class="wave" id="wave3"></div>
+                        <div class="wave" id="wave4"></div>
                     </div>
                     <ul class="social-icon">
-                      <li class="social-icon__item"><a class="social-icon__link" href="#">
-                          <ion-icon name="logo-facebook"></ion-icon>
+                        <li class="social-icon__item"><a class="social-icon__link" href="#">
+                            <ion-icon name="logo-facebook"></ion-icon>
                         </a></li>
-                      <li class="social-icon__item"><a class="social-icon__link" href="#">
-                          <ion-icon name="logo-twitter"></ion-icon>
+                        <li class="social-icon__item"><a class="social-icon__link" href="#">
+                            <ion-icon name="logo-twitter"></ion-icon>
                         </a></li>
-                      <li class="social-icon__item"><a class="social-icon__link" href="#">
-                          <ion-icon name="logo-linkedin"></ion-icon>
+                        <li class="social-icon__item"><a class="social-icon__link" href="#">
+                            <ion-icon name="logo-linkedin"></ion-icon>
                         </a></li>
-                      <li class="social-icon__item"><a class="social-icon__link" href="#">
-                          <ion-icon name="logo-instagram"></ion-icon>
+                        <li class="social-icon__item"><a class="social-icon__link" href="#">
+                            <ion-icon name="logo-instagram"></ion-icon>
                         </a></li>
                     </ul>
                     <ul class="menu">
-                      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-                      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-                      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
-                      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
-                      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
-                
+                        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
                     </ul>
-                  </footer>
-                  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-                  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                </footer>
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             </div>
         </div>
-        
-
     </main>
 </body>
 </html>

@@ -1,34 +1,39 @@
 <?php
-// Inicia a sess�o.
+// Inicia a sessão.
 session_start();
 
 // Pegando os dados de login enviados.
 $nome = $_POST['username'];
 $senha = $_POST['usersenha'];
 
-/* Conectando com o banco de dados para cadastrar registros */
+// Conectando com o banco de dados
 $datasource = 'mysql:host=localhost;dbname=benkyo_project';
 $user = 'root';
 $pass = 'vertrigo';
 $db = new PDO($datasource, $user, $pass);
-	
-$query = "SELECT * FROM usuario WHERE nome=? AND senha=?";
+
+// Consulta SQL para verificar o usuário e senha
+$query = "SELECT id, nome FROM usuario WHERE nome = ? AND senha = ?";
 $stm = $db->prepare($query);
 $stm->bindParam(1, $nome);
 $stm->bindParam(2, $senha);
 $stm->execute();
 
-if ($stm -> fetch()) {
-	// Login efetuado com sucesso.
+// Verifica se um usuário foi encontrado
+$resultado = $stm->fetch(PDO::FETCH_ASSOC);
+if ($resultado) {
+    // Login efetuado com sucesso.
 
-	// Armazenando usu�rio na sess�o.
-	$_SESSION['user'] = $nome;
-	
-	// Redirecionando para a p�gina inicial.
-	header("location:principal.html");
+    // Armazenando o ID e o nome do usuário na sessão
+    $_SESSION['user_id'] = $resultado['id'];  // ID do usuário
+    $_SESSION['user_name'] = $resultado['nome'];  // Nome do usuário
+
+    // Redirecionando para a página inicial.
+    header("location:principal.html");
+    exit();  // Garantir que o script pare após o redirecionamento
 } else {
-	// Caso usu�rio ou senha estejam incorretos.
-	print "<p>Usuário e/ou Senha Inválidos!</p>";
-	print "<a href='index.php'>Voltar</a>";
+    // Caso usuário ou senha estejam incorretos.
+    echo "<p>Usuário e/ou Senha Inválidos!</p>";
+    echo "<a href='index.php'>Voltar</a>";
 }
 ?>

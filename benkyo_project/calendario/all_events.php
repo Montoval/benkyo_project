@@ -1,13 +1,26 @@
 <?php
-$mysqli = new PDO("mysql:host=localhost;dbname=benkyo_project", "root", "vertrigo");
+session_start();
 
-// Verifica conexão
-if (!$mysqli) {
-    die("Connection failed: " . $mysqli->errorInfo());
+// Verifique se o usuário está logado
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php'); // Redireciona para a página de login se não estiver logado
+    exit();
 }
 
-$query = "SELECT * FROM events ORDER BY event_date DESC";
-$result = $mysqli->query($query);
+$user_id = $_SESSION['user_id'];
+
+$pdo = new PDO("mysql:host=localhost;dbname=benkyo_project", "root", "vertrigo");
+
+// Verifique a conexão
+if (!$pdo) {
+    die("Connection failed: " . $pdo->errorInfo());
+}
+
+// Prepare e execute a consulta para buscar eventos do usuário
+$query = "SELECT * FROM evento WHERE idUsuario = ? ORDER BY dataEvento DESC";
+$stmt = $pdo->prepare($query);
+$stmt->execute([$user_id]);
+$events = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -32,18 +45,18 @@ $result = $mysqli->query($query);
 </head>
 <body>
     <h1>Todos os Eventos</h1>
-    <a href="index.php">Voltar ao Calendário</a>
+    <a href="../calendario.php">Voltar ao Calendário</a>
     <table>
         <tr>
             <th>Data</th>
-            <th>Título</th>
-            <th>Descrição</th>
+            <th>Local</th>
+            <th>Hora</th>
         </tr>
         <?php 
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            $data = htmlspecialchars($row['event_date']);
-            $local = htmlspecialchars($row['event_local']);
-            $hora = htmlspecialchars($row['event_hora']);
+        foreach ($events as $event) {
+            $data = htmlspecialchars($event['dataEvento']);
+            $local = htmlspecialchars($event['localEvento']);
+            $hora = htmlspecialchars($event['horaEvento']);
 
             echo "<tr>
                     <td>$data</td>
