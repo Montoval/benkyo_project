@@ -85,7 +85,6 @@ if (isset($_SESSION['user_id'])) {
             </select><br>
             <button type="submit">Adicionar</button>
         </form>
-        <a href="atividades.php">Voltar</a>
     </div>
 </body>
 </html>
