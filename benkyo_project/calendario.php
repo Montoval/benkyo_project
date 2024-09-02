@@ -9,8 +9,8 @@
 <body>
     <nav class="menu-fixo">
         <a href="principal.html">Inicio</a>
-        <a href="atividades.php">Atividades</a>
         <a href="calendario.php" class="active">Calendário</a>
+        <a href="atividades.php">Atividades</a>
         <a href="perfil.php">Perfil</a>
     </nav>
     <main>
