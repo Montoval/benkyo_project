@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 12-Ago-2024 às 11:23
+-- Generation Time: 02-Set-2024 às 11:34
 -- Versão do servidor: 5.7.25
 -- versão do PHP: 7.1.26
 
@@ -33,9 +33,20 @@ USE `benkyo_project`;
 DROP TABLE IF EXISTS `atividade`;
 CREATE TABLE `atividade` (
   `idAtividade` int(11) NOT NULL,
+  `idUsuario` int(11) NOT NULL,
   `descricaoAtividade` varchar(255) NOT NULL,
   `tipoAtividade` enum('Comemorativa','Esportes','Estudos','Outros') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `atividade`
+--
+
+INSERT INTO `atividade` (`idAtividade`, `idUsuario`, `descricaoAtividade`, `tipoAtividade`) VALUES
+(6, 25, 'festa de aniversario', 'Comemorativa'),
+(7, 25, 'Atletismo', 'Esportes'),
+(8, 25, 'Matematica', 'Estudos'),
+(9, 25, 'Volei', 'Esportes');
 
 -- --------------------------------------------------------
 
@@ -52,6 +63,14 @@ CREATE TABLE `evento` (
   `horaEvento` time NOT NULL,
   `localEvento` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `evento`
+--
+
+INSERT INTO `evento` (`idEvento`, `idUsuario`, `idAtividade`, `dataEvento`, `horaEvento`, `localEvento`) VALUES
+(2, 25, 7, '2024-08-31', '14:21:00', 'São Paulo'),
+(3, 25, 9, '2024-09-25', '18:45:00', 'Minha Casa');
 
 -- --------------------------------------------------------
 
@@ -72,12 +91,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
-(15, 'joao victor', 'malfoy2@gmail.com', ''),
-(17, 'matheus', 'matheus@gmail.com', ''),
-(18, 'kawai', 'Vitor@gmail.com', '123456'),
-(19, 'issao', 'isso@gmail.com', 'd34ba032a189ceec51ad9b075f49c3cd'),
-(20, 'Ryu Miwa', 'Ryu@gmail.com', 'abd842f884d55ac9acc4816e458738b9'),
-(21, 'limas', 'turbo@gmail.com', '202cb962ac59075b964b07152d234b70');
+(25, 'GAMERBR', 'victor@gmail.com', '123'),
+(26, 'kawachi', 'kawachi@gmail.com', '123');
 
 --
 -- Indexes for dumped tables
@@ -87,7 +102,8 @@ INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
 -- Indexes for table `atividade`
 --
 ALTER TABLE `atividade`
-  ADD PRIMARY KEY (`idAtividade`);
+  ADD PRIMARY KEY (`idAtividade`),
+  ADD KEY `fk_atividade_usuario` (`idUsuario`);
 
 --
 -- Indexes for table `evento`
@@ -111,23 +127,29 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `atividade`
 --
 ALTER TABLE `atividade`
-  MODIFY `idAtividade` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idAtividade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `idEvento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idEvento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Limitadores para a tabela `atividade`
+--
+ALTER TABLE `atividade`
+  ADD CONSTRAINT `fk_atividade_usuario` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`id`);
 
 --
 -- Limitadores para a tabela `evento`
