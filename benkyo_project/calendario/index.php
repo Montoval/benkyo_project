@@ -88,9 +88,18 @@ $events = getEvents($mysqli, $month, $year, $user_id);
             align-items: center;
             width: 80%;
         }
+
+        .box-label{
+            width: 300px;
+            border: 2px solid red;
+        }
+
         .input-eventos {
-            border-radius: 10px;
-            width: 90%;
+            padding: 5px;
+            /* border: 2px solid red; */
+            border-radius: 7px;
+            width: 70%;
+            height: 25px;
         }
     
         .butao:hover{
@@ -135,6 +144,10 @@ $events = getEvents($mysqli, $month, $year, $user_id);
             <th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th>
         </tr>
         <?php
+     
+        
+      
+        
         $first_day = date('w', strtotime("$year-$month-01"));
         $days_in_month = date('t', strtotime("$year-$month-01"));
         $day_counter = 1;
@@ -169,35 +182,13 @@ $events = getEvents($mysqli, $month, $year, $user_id);
         ?>
     </table>
     <div class="box-eventos">
-<<<<<<< HEAD
         <h2>Adicionar Evento</h2>
         <form action="calendario/add_event.php" method="post">
-            <label for="event_date">Data:</label>
-            <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br>
-            <label for="event_local">Local:</label>
-            <input type="text" id="event_local" class="input-eventos" name="event_local" required><br>
-            <label for="event_hora">Hora:</label>
-            <input type="time" id="event_hora" class="input-eventos" name="event_hora" required><br>
-            <label for="idAtividade">Atividade:</label>
-            <select id="idAtividade" name="idAtividade" required>
-                <?php
-                $atividade_query = "SELECT * FROM atividade";
-                $atividade_result = $mysqli->query($atividade_query);
-                while ($atividade = $atividade_result->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<option value='{$atividade['idAtividade']}'>{$atividade['descricaoAtividade']}</option>";
-                }
-                ?>
-            </select><br>
-            <button type="submit">Adicionar Evento</button>
-        </form>
-=======
-            <h2>Adicionar Evento</h2>
-            <form action="calendario/add_event.php" method="post">
-        <label for="event_date">Data:</label>
+        <label class="box-label" for="event_date">Data:</label>
         <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br>
-        <label for="event_local">Local:</label>
+        <label class="box-label" for="event_local">Local:</label>
         <input type="text" id="event_local" class="input-eventos" name="event_local" required><br>
-        <label for="event_hora">Hora:</label>
+        <label class="box-label" for="event_hora">Hora:</label>
         <input type="time" id="event_hora" class="input-eventos" name="event_hora" required><br>
         <label for="idAtividade">Atividade:</label>
         <select id="idAtividade" name="idAtividade" required>
@@ -212,7 +203,6 @@ $events = getEvents($mysqli, $month, $year, $user_id);
         <div id="box-butao">
             <button class="butao" type="submit">Adicionar Evento</button>
             </form>
->>>>>>> 7730bb70d155731bc9173ab47a7c0d347fdd38d2
 
                 <button class="butao" onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
         </div>
