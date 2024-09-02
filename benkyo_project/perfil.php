@@ -54,6 +54,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required><br>
                             <button type="submit">Atualizar</button>
+                            <a href="logout.php">Sair</a>
                         </form>
                     </div>
                 </div>

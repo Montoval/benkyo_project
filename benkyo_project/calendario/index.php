@@ -8,13 +8,17 @@ if (!$mysqli) {
 }
 
 // Função para obter eventos
-function getEvents($mysqli, $month, $year) {
+function getEvents($mysqli, $month, $year, $user_id) {
     $start_date = "$year-$month-01";
     $end_date = date("Y-m-t", strtotime($start_date));
-    $query = "SELECT * FROM evento WHERE dataEvento BETWEEN '$start_date' AND '$end_date'";
-    $result = $mysqli->query($query);
+    $query = "SELECT * FROM evento WHERE dataEvento BETWEEN '$start_date' AND '$end_date' AND idUsuario = ?";
+    
+    $stm = $mysqli->prepare($query);
+    $stm->bindParam(1, $user_id);
+    $stm->execute();
+    
     $events = [];
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $stm->fetch(PDO::FETCH_ASSOC)) {
         $events[$row['dataEvento']][] = $row;
     }
     return $events;
@@ -22,8 +26,9 @@ function getEvents($mysqli, $month, $year) {
 
 $month = isset($_GET['month']) ? $_GET['month'] : date('m');
 $year = isset($_GET['year']) ? $_GET['year'] : date('Y');
-$events = getEvents($mysqli, $month, $year);
+$user_id = $_SESSION['user_id'];  // Obtenha o ID do usuário da sessão
 
+$events = getEvents($mysqli, $month, $year, $user_id);
 ?>
 
 <!DOCTYPE html>
@@ -95,10 +100,6 @@ $events = getEvents($mysqli, $month, $year);
             <th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th>
         </tr>
         <?php
-     
-        
-      
-        
         $first_day = date('w', strtotime("$year-$month-01"));
         $days_in_month = date('t', strtotime("$year-$month-01"));
         $day_counter = 1;
@@ -135,24 +136,24 @@ $events = getEvents($mysqli, $month, $year);
     <div class="box-eventos">
         <h2>Adicionar Evento</h2>
         <form action="calendario/add_event.php" method="post">
-    <label for="event_date">Data:</label>
-    <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br>
-    <label for="event_local">Local:</label>
-    <input type="text" id="event_local" class="input-eventos" name="event_local" required><br>
-    <label for="event_hora">Hora:</label>
-    <input type="time" id="event_hora" class="input-eventos" name="event_hora" required><br>
-    <label for="idAtividade">Atividade:</label>
-    <select id="idAtividade" name="idAtividade" required>
-        <?php
-        $atividade_query = "SELECT * FROM atividade";
-        $atividade_result = $mysqli->query($atividade_query);
-        while ($atividade = $atividade_result->fetch(PDO::FETCH_ASSOC)) {
-            echo "<option value='{$atividade['idAtividade']}'>{$atividade['descricaoAtividade']}</option>";
-        }
-        ?>
-    </select><br>
-    <button type="submit">Adicionar Evento</button>
-</form>
+            <label for="event_date">Data:</label>
+            <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br>
+            <label for="event_local">Local:</label>
+            <input type="text" id="event_local" class="input-eventos" name="event_local" required><br>
+            <label for="event_hora">Hora:</label>
+            <input type="time" id="event_hora" class="input-eventos" name="event_hora" required><br>
+            <label for="idAtividade">Atividade:</label>
+            <select id="idAtividade" name="idAtividade" required>
+                <?php
+                $atividade_query = "SELECT * FROM atividade";
+                $atividade_result = $mysqli->query($atividade_query);
+                while ($atividade = $atividade_result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<option value='{$atividade['idAtividade']}'>{$atividade['descricaoAtividade']}</option>";
+                }
+                ?>
+            </select><br>
+            <button type="submit">Adicionar Evento</button>
+        </form>
 
         <button onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
     </div>
