@@ -87,19 +87,32 @@ $events = getEvents($mysqli, $month, $year, $user_id);
             width: 80%;
         }
 
-        .box-label{
+        label{
+            display: block;
+            float: left;
+            width: 70px;
+    
+            /* border: 2px solid red; */
+        }
+        /* .box-label{
             width: 300px;
             border: 2px solid red;
-        }
+        } */
 
         .input-eventos {
             padding: 5px;
             /* border: 2px solid red; */
             border-radius: 7px;
-            width: 70%;
+            width: 80%;
             height: 25px;
         }
-    
+
+        input{
+            display: block;
+            /* float:center; */
+            margin-left: auto;
+            margin-right: auto;
+        }
         .butao:hover{
             background-color: rgba(0,0,0,0.5);
             color: white;
