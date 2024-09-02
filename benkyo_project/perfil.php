@@ -31,8 +31,8 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 <body>
     <nav class="menu-fixo">
         <a href="principal.html" class="active">Inicio</a>
-        <a href="calendario.php">Calendário</a>
         <a href="atividades.php">Atividades</a>
+        <a href="calendario.php">Calendário</a>
         <a href="perfil.php">Perfil</a>
     </nav>
     <main>
