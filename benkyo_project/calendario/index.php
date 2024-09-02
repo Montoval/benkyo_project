@@ -24,13 +24,34 @@ function getEvents($mysqli, $month, $year, $user_id) {
     return $events;
 }
 
-
-$month = isset($_GET['month']) ? $_GET['month'] : date('m');
-$year = isset($_GET['year']) ? $_GET['year'] : date('Y');
+// Define o mês e o ano atuais se não estiverem definidos na URL
+$month = isset($_GET['month']) && is_numeric($_GET['month']) && $_GET['month'] >= 1 && $_GET['month'] <= 12 ? $_GET['month'] : date('m');
+$year = isset($_GET['year']) && is_numeric($_GET['year']) ? $_GET['year'] : date('Y');
 $user_id = $_SESSION['user_id'];  // Obtenha o ID do usuário da sessão
 
 $events = getEvents($mysqli, $month, $year, $user_id);
 
+// Array com os nomes dos meses em português
+$months = [
+    '01' => 'Janeiro',
+    '02' => 'Fevereiro',
+    '03' => 'Março',
+    '04' => 'Abril',
+    '05' => 'Maio',
+    '06' => 'Junho',
+    '07' => 'Julho',
+    '08' => 'Agosto',
+    '09' => 'Setembro',
+    '10' => 'Outubro',
+    '11' => 'Novembro',
+    '12' => 'Dezembro',
+];
+
+// Certifique-se de que o mês seja uma string com dois dígitos
+$month = str_pad($month, 2, '0', STR_PAD_LEFT);
+
+// Definir o nome do mês em português
+$monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
 ?>
 
 <!DOCTYPE html>
@@ -57,16 +78,17 @@ $events = getEvents($mysqli, $month, $year, $user_id);
             background-color: #f2f2f2;
         }
 
-        .calendar tr :hover {
+        .calendar tr:hover {
             background-color: darkgray;
-
         }
+
         .event {
             background-color: #e6ffe6;
             cursor: pointer;
             margin-top: 5px;
             position: relative;
         }
+
         .event-details {
             display: none;
             position: absolute;
@@ -79,9 +101,11 @@ $events = getEvents($mysqli, $month, $year, $user_id);
             left: 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
+
         .event:hover .event-details {
             display: block;
         }
+
         .box-eventos {
             padding: 5px;
             border-radius: 15px;
@@ -94,47 +118,39 @@ $events = getEvents($mysqli, $month, $year, $user_id);
             width: 80%;
         }
 
-        label{
+        label {
             display: block;
             float: left;
             width: 70px;
-    
-            /* border: 2px solid red; */
         }
-        /* .box-label{
-            width: 300px;
-            border: 2px solid red;
-        } */
 
         .input-eventos {
             padding: 5px;
-            /* border: 2px solid red; */
             border-radius: 7px;
             width: 80%;
             height: 25px;
         }
 
-        input{
+        input {
             display: block;
-            /* float:center; */
             margin-left: auto;
             margin-right: auto;
         }
-        .butao:hover{
+
+        .butao:hover {
             background-color: rgba(0,0,0,0.5);
             color: white;
         }
-        h2{
+
+        h2 {
             color: #fff;
             text-align: center;
         }
-        .butao{
-            
-            /* float:left; */
-            
+
+        .butao {
             padding: 5px;
             width: fit-content;
-            height:25px;
+            height: 25px;
             background-color: white;
             color: black;
             border: 2px solid black;
@@ -142,30 +158,26 @@ $events = getEvents($mysqli, $month, $year, $user_id);
             transition-duration: 0.4s;
         }
 
-        #box-butao{
+        #box-butao {
             padding: 5px;
             height: fit-content;
             width: fit-content;
-            /* border: 2px solid red; */
-            margin-left:auto;
-            margin-right:auto;
-
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
     <h1>Calendário de Eventos</h1>
+    <h2><?= $monthName ?> de <?= $year ?></h2> <!-- Exibe o mês e o ano atuais em português -->
     <a href="?month=<?= $month == 1 ? 12 : $month - 1 ?>&year=<?= $month == 1 ? $year - 1 : $year ?>">Anterior</a>
     <a href="?month=<?= $month == 12 ? 1 : $month + 1 ?>&year=<?= $month == 12 ? $year + 1 : $year ?>">Próximo</a>
+    
     <table class="calendar">
         <tr>
             <th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th>
         </tr>
         <?php
-     
-        
-      
-        
         $first_day = date('w', strtotime("$year-$month-01"));
         $days_in_month = date('t', strtotime("$year-$month-01"));
         $day_counter = 1;
@@ -199,30 +211,33 @@ $events = getEvents($mysqli, $month, $year, $user_id);
         }
         ?>
     </table>
+    
     <div class="box-eventos">
         <h2>Adicionar Evento</h2>
         <form action="calendario/add_event.php" method="post">
-        <label class="box-label" for="event_date">Data:</label>
-        <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br>
-        <label class="box-label" for="event_local">Local:</label>
-        <input type="text" id="event_local" class="input-eventos" name="event_local" required><br>
-        <label class="box-label" for="event_hora">Hora:</label>
-        <input type="time" id="event_hora" class="input-eventos" name="event_hora" required><br>
-        <label for="idAtividade">Atividade:</label>
-        <select id="idAtividade" name="idAtividade" required>
-            <?php
-            $atividade_query = "SELECT * FROM atividade";
-            $atividade_result = $mysqli->query($atividade_query);
-            while ($atividade = $atividade_result->fetch(PDO::FETCH_ASSOC)) {
-                echo "<option value='{$atividade['idAtividade']}'>{$atividade['descricaoAtividade']}</option>";
-            }
-            ?>
-        </select><br>
-        <div id="box-butao">
-            <button class="butao" type="submit">Adicionar Evento</button>
-            </form>
-
-                <button class="butao" onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
+            <label class="box-label" for="event_date">Data:</label>
+            <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br>
+            <label class="box-label" for="event_local">Local:</label>
+            <input type="text" id="event_local" class="input-eventos" name="event_local" required><br>
+            <label class="box-label" for="event_hora">Hora:</label>
+            <input type="time" id="event_hora" class="input-eventos" name="event_hora" required><br>
+            <label for="idAtividade">Atividade:</label>
+            <select id="idAtividade" name="idAtividade" required>
+                <?php
+                // Filtrar atividades apenas do usuário logado
+                $atividade_query = "SELECT * FROM atividade WHERE idUsuario = ?";
+                $stm = $mysqli->prepare($atividade_query);
+                $stm->bindParam(1, $user_id);
+                $stm->execute();
+                while ($atividade = $stm->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<option value='{$atividade['idAtividade']}'>{$atividade['descricaoAtividade']}</option>";
+                }
+                ?>
+            </select><br>
+            <div id="box-butao">
+                <button class="butao" type="submit">Adicionar Evento</button>
+        </form>
+        <button class="butao" onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
         </div>
     </div>
 </body>
