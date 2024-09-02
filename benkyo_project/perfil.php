@@ -25,7 +25,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Perfil</title>
-    <link rel="stylesheet" href="styleP.css">
+    <link rel="stylesheet" href="perfil.css">
     <link rel="icon" type="image/x-icon" href="imagens/Benkyoicon2.jpg">
 </head>
 <body>
@@ -43,6 +43,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                         <h1>Perfil do Usuário</h1>
                         <p><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></p>
                         <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
+                        <img src="perfil.png">
                     
                     </div>
                     <div class="sugestoes">
