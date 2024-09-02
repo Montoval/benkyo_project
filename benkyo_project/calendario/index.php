@@ -84,6 +84,13 @@ $events = getEvents($mysqli, $month, $year);
             border-radius: 10px;
             width: 90%;
         }
+
+        .butao{
+            background-color: white;
+            color: black;
+            border: 2px solid #04AA6D;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -151,10 +158,10 @@ $events = getEvents($mysqli, $month, $year);
         }
         ?>
     </select><br>
-    <button type="submit">Adicionar Evento</button>
+    <button class="butao" type="submit">Adicionar Evento</button>
 </form>
 
-        <button onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
+        <button class="butao" onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
     </div>
 </body>
 </html>
