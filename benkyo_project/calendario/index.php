@@ -56,6 +56,11 @@ $events = getEvents($mysqli, $month, $year, $user_id);
         .calendar th {
             background-color: #f2f2f2;
         }
+
+        .calendar tr :hover {
+            background-color: darkgray;
+
+        }
         .event {
             background-color: #e6ffe6;
             cursor: pointer;
