@@ -38,6 +38,10 @@ if (isset($_SESSION['user_id'])) {
             margin: auto;
             background-color: rgba(0,0,0,0.5);
             border-radius: 10px;
+            padding: 5px;
+            border-radius: 15px;
+            margin-top: 30px;
+            align-items: center;
         }
         h1{
             color: black;
@@ -56,8 +60,13 @@ if (isset($_SESSION['user_id'])) {
             margin-right: auto;
             margin-top: 10px;
             border-radius: 10px;
-            border: green solid;
+            border: black solid;
             width: 100px
+        }
+        label{
+            display: block;
+            float: left;
+            width: 70px;
         }
     </style>
 </head>
