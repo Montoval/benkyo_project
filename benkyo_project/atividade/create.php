@@ -36,6 +36,29 @@ if (isset($_SESSION['user_id'])) {
             height:fit-content;
             width:fit-content;
             background-color: rgba(0, 0, 0, 0.4);
+            margin: auto;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 10px;
+        }
+        h1{
+            color: black;
+        }
+        input{
+            width: 500px;
+            border-radius: 10px;
+        }
+        select{
+            width: 500px;   
+            border-radius: 10px;
+        }
+        button{
+            display: block; /* Necessário para o margin funcionar */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: green solid;
+            width: 100px
         }
     </style>
 </head>
@@ -43,15 +66,15 @@ if (isset($_SESSION['user_id'])) {
     <div class="box-atividades">
         <h1>Adicionar Atividade</h1>
         <form method="post">
-            <label for="descricaoAtividade">Descrição:</label>
+            <label for="descricaoAtividade">Descrição:</label><br>
             <input type="text" id="descricaoAtividade" name="descricaoAtividade" required><br>
-            <label for="tipoAtividade">Tipo:</label>
+            <label for="tipoAtividade">Tipo:</label><br>
             <select id="tipoAtividade" name="tipoAtividade" required>
                 <option value="Comemorativa">Comemorativa</option>
                 <option value="Esportes">Esportes</option>
                 <option value="Estudos">Estudos</option>
                 <option value="Outros">Outros</option>
-            </select>
+            </select><br>
             <button type="submit">Adicionar</button>
         </form>
         <a href="atividades.php">Voltar</a>

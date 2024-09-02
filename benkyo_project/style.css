@@ -78,6 +78,6 @@ button {
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
-    /* border-radius: 5px;
-    border: 1px dotted #ccc; */
+     border-radius: 5px;
+    border: 1px dotted #ccc; 
 }
