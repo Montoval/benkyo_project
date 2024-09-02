@@ -43,7 +43,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                         <h1>Perfil do Usuário</h1>
                         <p><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></p>
                         <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
-                        <img src="perfil.png">
+                        <img src="imagens/perfil.png">
                     
                     </div>
                     <div class="sugestoes">
