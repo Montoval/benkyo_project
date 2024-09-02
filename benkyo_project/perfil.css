@@ -111,13 +111,11 @@ h1{
 
 #sugestoes-row1{
   /* border: 3px solid red; */
-  padding: 5px ;
   height: 50%;
   width: 100%;
 }
 
 #sugestoes-row2{
-  padding: 5px;
   flex: auto;
   /* border: 3px solid blue; */
   height: 50%;
@@ -129,7 +127,6 @@ p{
 } */
 
 .curso1{
-  padding: 10px;
   float: left;
   text-align: justify;
   height: 100%;
@@ -137,69 +134,65 @@ p{
   border: 2px solid black;
   border-radius: 15px;
   /* background-color: rgba(0, 128, 0, 0.486); */
-  background-color: #9abbe6;
+  background-color: #44a666bd;
 }
 .curso2{
-  padding: 10px;
-  float: left;
-  text-align: justify;
-  height: 100%;
-  width: 33.333%;
-  border: 3px solid white;
-  border-radius: 15px;
-  background-color: #ecb2bb;
-  /* background-color: rgba(0, 66, 128, 0.486); */
-}
-.curso3{
-  padding: 10px;
   float: left;
   text-align: justify;
   height: 100%;
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: #9abbe6;
+  background-color: #24a0bfbd;
+  /* background-color: rgba(0, 66, 128, 0.486); */
+}
+.curso3{
+  float: left;
+  text-align: justify;
+  height: 100%;
+  width: 33.333%;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #6C6AA6bd;
   /* background-color: rgba(113, 0, 128, 0.486); */
 }
 .curso4{
-  padding: 10px;
   float: left;
   text-align: justify;
 
   height: 100%;
   width: 33.333%;
-  border: 3px solid white;
+  border: 2px solid black;
   border-radius: 15px;
-  background-color: #ecb2bb;
+  background-color: #F25050bd;
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .curso5{
-  padding: 10px;
   float: left;
   text-align: justify;
   height: 100%;
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: #9abbe6;
+  background-color: #f21b63bd;
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .curso6{
-  padding: 10px;
   float: left;
   text-align: justify;
+
   height: 100%;
   width: 33.333%;
-  border: 3px solid white;
+  border: 2px solid black;
   border-radius: 15px;
-  background-color: #ecb2bb;
+  background-color: #FF81D0bd;
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 
 
 .curso1, a{
   /* color: rgb(0, 255, 0); */
-  color: white;
+  color: black;
 }
 .curso1, a:hover{
   /* color: rgb(138, 255, 138); */
