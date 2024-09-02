@@ -1,8 +1,14 @@
 <?php
+session_start();
 include "db.php";
 
-$query = "SELECT * FROM Atividade";
-$stmt = $pdo->query($query);
+// Obter o ID do usuário logado da sessão
+$user_id = $_SESSION['user_id'];
+
+// Modificar a consulta para filtrar atividades pelo usuário logado
+$query = "SELECT * FROM Atividade WHERE idUsuario = ?";
+$stmt = $pdo->prepare($query);
+$stmt->execute([$user_id]);
 $atividades = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 

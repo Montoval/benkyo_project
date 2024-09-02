@@ -24,11 +24,13 @@ function getEvents($mysqli, $month, $year, $user_id) {
     return $events;
 }
 
+
 $month = isset($_GET['month']) ? $_GET['month'] : date('m');
 $year = isset($_GET['year']) ? $_GET['year'] : date('Y');
 $user_id = $_SESSION['user_id'];  // Obtenha o ID do usuário da sessão
 
 $events = getEvents($mysqli, $month, $year, $user_id);
+
 ?>
 
 <!DOCTYPE html>
