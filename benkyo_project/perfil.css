@@ -88,17 +88,35 @@ p{
   
 }
 
-.imgperfil{
-    width: 200px;
-    height: 200px;
-    padding-top: 250px;
-    background-image: url(imagens/perfil.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin: auto;
 
+    .imgperfil {
+        width: 200px;
+        height: 200px;
+        padding-top: 250px;
+        background-image: url(imagens/perfil.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative; /* Necessário para posicionar o pseudo-elemento */
+        margin: auto;
+    }
     
-}
+    .imgperfil::after {
+        content: ""; /* Necessário para criar o pseudo-elemento */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(64, 64, 64, 0.5); /* Cinza escuro com 50% de transparência */
+        opacity: 0; /* Inicialmente invisível */
+        transition: opacity 0.3s ease; /* Suaviza a transição */
+        pointer-events: none; /* Não interfere com os eventos de mouse */
+    }
+    
+    .imgperfil:hover::after {
+        opacity: 1; /* Torna a sobreposição visível quando o mouse passa por cima */
+    }
+
 #sugestoes_text{
   margin-top: 20px;
   color: white;
