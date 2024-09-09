@@ -42,11 +42,13 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                     <div class="perfil">
                         <h1>Perfil do Usuário</h1>
                         <div class="imgperfil"></div>
-                        <p ><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></p>
-                        <p ><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
+                        <div class ="trocaperfil"></div>
+                        <h3 ><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></h3>
+                        <h3><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></h3>
                         
                     
                     </div>
+                <div class = "alterar">
                     <div class="editar">
                         <h1>Editar Perfil</h1>
                         <form action="updateperfil.php" method="post">
@@ -60,7 +62,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                         </form>
                     </div>
                 </div>
-                
+            </div>
                 <footer class="footer-fix">
                     <div class="waves">
                         <div class="wave" id="wave1"></div>

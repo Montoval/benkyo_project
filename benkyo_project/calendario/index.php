@@ -113,7 +113,7 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
             margin-left: auto;
             margin-right: auto;
             height: fit-content;
-            background-color: rgba(0,0,0,0.5);
+            background-color: #AC99F2;
             align-items: center;
             width: 80%;
         }

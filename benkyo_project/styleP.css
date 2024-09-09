@@ -1,7 +1,7 @@
 body{
     margin: 0;
     background-color: lightcyan;
-    background-image: url(imagens/lofigirl.png);
+    background-image: url(imagens/lofi-girl\ edited2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -66,7 +66,7 @@ p{
     transform: translate(-50%,-50%);
     width: 80%;
     height: 1500px;
-    background-color:rgba(255, 255, 255, 0.678);
+    background-color:rgba(255, 255, 255, 0.7);
     /* border: 2px solid black; */
     box-shadow: 2px 2px 8px black;
     border-radius: 10px;
@@ -75,7 +75,7 @@ p{
 .sugestoes{
   height: 250px;
   width: 100%;
-  /* background-color: rgba(43, 43, 43, 0.938); */
+  background-color: rgba(43, 43, 43, 0.725);
   box-shadow: 2px 2px 8px black;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -136,7 +136,7 @@ p{
   border: 2px solid black;
   border-radius: 15px;
   /* background-color: rgba(0, 128, 0, 0.486); */
-  background-color: #9abbe6;
+  background-color: #AC99F2;
 }
 .curso2{
   padding: 10px;
@@ -146,7 +146,7 @@ p{
   width: 33.333%;
   border: 3px solid white;
   border-radius: 15px;
-  background-color: #ecb2bb;
+  background-color: #9abbe6;
   /* background-color: rgba(0, 66, 128, 0.486); */
 }
 .curso3{
@@ -157,7 +157,7 @@ p{
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: #9abbe6;
+  background-color: #AC99F2;
   /* background-color: rgba(113, 0, 128, 0.486); */
 }
 .curso4{
@@ -169,7 +169,7 @@ p{
   width: 33.333%;
   border: 3px solid white;
   border-radius: 15px;
-  background-color: #ecb2bb;
+  background-color: #9abbe6;
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .curso5{
@@ -180,7 +180,7 @@ p{
   width: 33.333%;
   border: 2px solid black;
   border-radius: 15px;
-  background-color: #9abbe6;
+  background-color: #AC99F2;
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .curso6{
@@ -191,7 +191,7 @@ p{
   width: 33.333%;
   border: 3px solid white;
   border-radius: 15px;
-  background-color: #ecb2bb;
+  background-color: #9abbe6;
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 
