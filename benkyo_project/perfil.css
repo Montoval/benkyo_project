@@ -94,16 +94,15 @@ p{
         height: 200px;
         padding-top: 250px;
         background-image: url(imagens/perfil.png)  ;
-        
         background-size: contain;
         background-repeat: no-repeat;
-        position: relative; /* Necessário para posicionar o pseudo-elemento */
+        position: relative; 
         margin: auto;
     }
     
     
     .imgperfil::after {
-        content: ""; /* Necessário para criar o pseudo-elemento */
+        content: ""; 
         position: absolute;
         top: 0;
         left: 0;
@@ -115,6 +114,17 @@ p{
         pointer-events: none; /* Não interfere com os eventos de mouse */
         border-radius: 100PX;
         
+    }
+    .trocaperfil {
+      
+      color:pink;
+      width: 200px;
+      height: 200px;
+    }
+    .trocaperfil:hover{
+      
+      background-color: #2ecc71; /* Muda a cor de fundo ao passar o mouse */
+            transform: scale(1.1); /* Aumenta o tamanho em 10% */
     }
     
     .imgperfil:hover::after {

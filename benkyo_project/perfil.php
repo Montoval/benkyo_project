@@ -42,6 +42,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                     <div class="perfil">
                         <h1>Perfil do Usuário</h1>
                         <div class="imgperfil"></div>
+                        <div class ="trocaperfil"></div>
                         <h3 ><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></h3>
                         <h3><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></h3>
                         
