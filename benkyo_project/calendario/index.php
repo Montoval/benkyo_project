@@ -78,7 +78,7 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
             background-color: #f2f2f2;
         }
 
-        .calendar tr:hover {
+        .calendar td:hover {
             background-color: darkgray;
         }
 
@@ -113,7 +113,7 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
             margin-left: auto;
             margin-right: auto;
             height: fit-content;
-            background-color: rgba(0,0,0,0.5);
+            background-color: #AC99F2;
             align-items: center;
             width: 80%;
         }
@@ -165,13 +165,20 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
             margin-left: auto;
             margin-right: auto;
         }
+        a{
+            background-color: lightblue;
+          color:black;
+        }
+        #prox{
+            float:right;
+        }
     </style>
 </head>
 <body>
     <h1>Calendário de Eventos</h1>
     <h2><?= $monthName ?> de <?= $year ?></h2> <!-- Exibe o mês e o ano atuais em português -->
     <a href="?month=<?= $month == 1 ? 12 : $month - 1 ?>&year=<?= $month == 1 ? $year - 1 : $year ?>">Anterior</a>
-    <a href="?month=<?= $month == 12 ? 1 : $month + 1 ?>&year=<?= $month == 12 ? $year + 1 : $year ?>">Próximo</a>
+    <a id="prox" href="?month=<?= $month == 12 ? 1 : $month + 1 ?>&year=<?= $month == 12 ? $year + 1 : $year ?>">Próximo</a>
     
     <table class="calendar">
         <tr>
