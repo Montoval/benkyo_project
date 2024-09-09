@@ -78,7 +78,7 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
             background-color: #f2f2f2;
         }
 
-        .calendar tr:hover {
+        .calendar td:hover {
             background-color: darkgray;
         }
 
