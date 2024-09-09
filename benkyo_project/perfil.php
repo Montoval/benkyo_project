@@ -31,22 +31,23 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 <body>
     <nav class="menu-fixo">
         <a href="principal.html" class="active">Inicio</a>
-        <a href="atividades.php">Atividades</a>
         <a href="calendario.php">Calendário</a>
+        <a href="atividades.php">Atividades</a>
         <a href="perfil.php">Perfil</a>
     </nav>
     <main>
         <div class="container">
             <div class="box">
                 <div class="menuP">
-                    <div class="sugestoes">
+                    <div class="perfil">
                         <h1>Perfil do Usuário</h1>
-                        <p><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></p>
-                        <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
-                        <img src="imagens/perfil.png">
+                        <div class="imgperfil"></div>
+                        <p ><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></p>
+                        <p ><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
+                        
                     
                     </div>
-                    <div class="sugestoes">
+                    <div class="editar">
                         <h1>Editar Perfil</h1>
                         <form action="updateperfil.php" method="post">
                             <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user['id']); ?>">
