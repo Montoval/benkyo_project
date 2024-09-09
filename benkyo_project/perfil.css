@@ -93,12 +93,14 @@ p{
         width: 200px;
         height: 200px;
         padding-top: 250px;
-        background-image: url(imagens/perfil.png);
-        background-size: cover;
+        background-image: url(imagens/perfil.png)  ;
+        
+        background-size: contain;
         background-repeat: no-repeat;
         position: relative; /* Necessário para posicionar o pseudo-elemento */
         margin: auto;
     }
+    
     
     .imgperfil::after {
         content: ""; /* Necessário para criar o pseudo-elemento */
@@ -106,11 +108,13 @@ p{
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 80%;
         background-color: rgba(64, 64, 64, 0.5); /* Cinza escuro com 50% de transparência */
         opacity: 0; /* Inicialmente invisível */
         transition: opacity 0.3s ease; /* Suaviza a transição */
         pointer-events: none; /* Não interfere com os eventos de mouse */
+        border-radius: 100PX;
+        
     }
     
     .imgperfil:hover::after {
@@ -393,4 +397,22 @@ p{
   100% {
     background-positon-x: 0px;
   }
+}
+h3{
+  color: white;
+}
+.alterar{
+  height: 200px;
+  width: 500px;
+  padding-top: 15px;
+  /* background-color: rgba(43, 43, 43, 0.938); */
+  background-color: rgba(71, 50, 71, 0.808);
+  box-shadow: 2px 2px 8px black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin: auto;
+  text-align: center;
+  line-height: 2.0; 
+  margin-top: 30px;
+  color: white;
 }
