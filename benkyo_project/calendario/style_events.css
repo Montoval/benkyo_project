@@ -1,7 +1,7 @@
 body{
     margin: 0;
     background-color: lightcyan;
-    background-image: url(imagens/lofigirl.png);
+    background-image: url(../imagens/lofigirl.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -72,10 +72,11 @@ p{
     border-radius: 10px;
 }
 
-.sugestoes{
-  height: 250px;
+.evento{
+  height: 50px;
   width: 100%;
   /* background-color: rgba(43, 43, 43, 0.938); */
+  background-color: rgba(71, 50, 71, 0.808);
   box-shadow: 2px 2px 8px black;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -108,125 +109,6 @@ h1{
   word-wrap: break-word;
 }
 
-#sugestoes-row1{
-  /* border: 3px solid red; */
-  padding: 5px ;
-  height: 50%;
-  width: 100%;
-}
-
-#sugestoes-row2{
-  padding: 5px;
-  flex: auto;
-  /* border: 3px solid blue; */
-  height: 50%;
-  width: 100%;
-}
-/* 
-p{
-  text-align: justify;
-} */
-
-.curso1{
-  padding: 10px;
-  float: left;
-  text-align: justify;
-  height: 100%;
-  width: 33.333%;
-  border: 2px solid black;
-  border-radius: 15px;
-  /* background-color: rgba(0, 128, 0, 0.486); */
-  background-color: #9abbe6;
-}
-.curso2{
-  padding: 10px;
-  float: left;
-  text-align: justify;
-  height: 100%;
-  width: 33.333%;
-  border: 3px solid white;
-  border-radius: 15px;
-  background-color: #ecb2bb;
-  /* background-color: rgba(0, 66, 128, 0.486); */
-}
-.curso3{
-  padding: 10px;
-  float: left;
-  text-align: justify;
-  height: 100%;
-  width: 33.333%;
-  border: 2px solid black;
-  border-radius: 15px;
-  background-color: #9abbe6;
-  /* background-color: rgba(113, 0, 128, 0.486); */
-}
-.curso4{
-  padding: 10px;
-  float: left;
-  text-align: justify;
-
-  height: 100%;
-  width: 33.333%;
-  border: 3px solid white;
-  border-radius: 15px;
-  background-color: #ecb2bb;
-  /* background-color: rgba(128, 0, 0, 0.486); */
-}
-.curso5{
-  padding: 10px;
-  float: left;
-  text-align: justify;
-  height: 100%;
-  width: 33.333%;
-  border: 2px solid black;
-  border-radius: 15px;
-  background-color: #9abbe6;
-  /* background-color: rgba(128, 0, 0, 0.486); */
-}
-.curso6{
-  padding: 10px;
-  float: left;
-  text-align: justify;
-  height: 100%;
-  width: 33.333%;
-  border: 3px solid white;
-  border-radius: 15px;
-  background-color: #ecb2bb;
-  /* background-color: rgba(128, 0, 0, 0.486); */
-}
-
-
-.curso1, a{
-  /* color: rgb(0, 255, 0); */
-  color: white;
-}
-.curso1, a:hover{
-  /* color: rgb(138, 255, 138); */
-  color: black;
-  transition: 0.5s;
-  font-size: 1.1em;
-}
-
-.complementar{
-  width: 500px;
-  height: 300px;
-  border: 1px solid black;
-  /* background-color: black; */
-  /* align-items:center; */
-  text-align: center;
-  margin: auto;
-  /* position: absolute; */
-  /* justify-content: center; */
-}
-/* .menuP{
-  width: 1000px;
-  height: 150px;
-    background-color: light;
-    border: solid black 2px;
-    border-radius: 10px;
-    margin: auto;
-
-} */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
