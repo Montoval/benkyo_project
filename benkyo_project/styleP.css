@@ -66,7 +66,7 @@ p{
     transform: translate(-50%,-50%);
     width: 80%;
     height: 1500px;
-    background-color:rgba(255, 255, 255, 0.678);
+    background-color:rgba(255, 255, 255, 0.7);
     /* border: 2px solid black; */
     box-shadow: 2px 2px 8px black;
     border-radius: 10px;
@@ -75,7 +75,7 @@ p{
 .sugestoes{
   height: 250px;
   width: 100%;
-  /* background-color: rgba(43, 43, 43, 0.938); */
+  background-color: rgba(43, 43, 43, 0.725);
   box-shadow: 2px 2px 8px black;
   border-radius: 10px;
   margin-bottom: 10px;
