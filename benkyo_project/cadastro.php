@@ -17,7 +17,7 @@
 <form method='POST' action='inserir.php'>
     <label>Nome: </label>
     <input name='nome' placeholder="Seu Nome"><br>
-    <label>E-mail: </label>
+    <label>Email: </label>
     <input name='email' type="text" id="email" placeholder="Seu E-mail"><br>
     <label>Senha: </label>
     <input name='senha' type="password" id="senha" placeholder="Sua Senha"><br>
