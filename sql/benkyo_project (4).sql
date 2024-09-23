@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 02-Set-2024 às 11:34
+-- Generation Time: 23-Set-2024 às 12:07
 -- Versão do servidor: 5.7.25
 -- versão do PHP: 7.1.26
 
@@ -46,7 +46,8 @@ INSERT INTO `atividade` (`idAtividade`, `idUsuario`, `descricaoAtividade`, `tipo
 (6, 25, 'festa de aniversario', 'Comemorativa'),
 (7, 25, 'Atletismo', 'Esportes'),
 (8, 25, 'Matematica', 'Estudos'),
-(9, 25, 'Volei', 'Esportes');
+(9, 25, 'Volei', 'Esportes'),
+(10, 25, 'Preparação', 'Estudos');
 
 -- --------------------------------------------------------
 
@@ -69,8 +70,13 @@ CREATE TABLE `evento` (
 --
 
 INSERT INTO `evento` (`idEvento`, `idUsuario`, `idAtividade`, `dataEvento`, `horaEvento`, `localEvento`) VALUES
-(2, 25, 7, '2024-08-31', '14:21:00', 'São Paulo'),
-(3, 25, 9, '2024-09-25', '18:45:00', 'Minha Casa');
+(3, 25, 9, '2024-09-25', '18:45:00', 'Minha Casa'),
+(4, 25, 9, '2024-09-17', '20:00:00', 'São Paulo'),
+(5, 25, 7, '2024-09-09', '05:54:00', 'escola'),
+(6, 25, 10, '2024-10-04', '13:20:00', 'IF'),
+(7, 25, 10, '2024-10-04', '13:20:00', 'IF'),
+(8, 25, 10, '2024-10-04', '13:20:00', 'IF'),
+(9, 25, 6, '2024-09-16', '23:34:00', 'Minha Casa');
 
 -- --------------------------------------------------------
 
@@ -127,13 +133,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `atividade`
 --
 ALTER TABLE `atividade`
-  MODIFY `idAtividade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `idAtividade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `idEvento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idEvento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `usuario`
