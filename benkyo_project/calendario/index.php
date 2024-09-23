@@ -108,12 +108,15 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
 
         .box-eventos {
             padding: 5px;
+            border: 3px solid rgba(255,255,255,0.6);
             border-radius: 15px;
             margin-top: 30px;
             margin-left: auto;
             margin-right: auto;
             height: fit-content;
-            background-color: #AC99F2;
+            backdrop-filter: blur(6px);
+
+            /* background-color: #AC99F2; */
             align-items: center;
             width: 80%;
         }
@@ -220,14 +223,14 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
     </table>
     
     <div class="box-eventos">
-        <h2>Adicionar Evento</h2>
+        <h2>Adicionar Evento</h2><br>
         <form action="calendario/add_event.php" method="post">
             <label class="box-label" for="event_date">Data:</label>
-            <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br>
+            <input type="date" id="event_date" class="input-eventos" name="event_date" required> <br><br>
             <label class="box-label" for="event_local">Local:</label>
-            <input type="text" id="event_local" class="input-eventos" name="event_local" required><br>
+            <input type="text" id="event_local" class="input-eventos" name="event_local" required><br><br>
             <label class="box-label" for="event_hora">Hora:</label>
-            <input type="time" id="event_hora" class="input-eventos" name="event_hora" required><br>
+            <input type="time" id="event_hora" class="input-eventos" name="event_hora" required><br><br>
             <label for="idAtividade">Atividade:</label>
             <select id="idAtividade" name="idAtividade" required>
                 <?php

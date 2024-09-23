@@ -67,6 +67,7 @@ if (isset($_SESSION['user_id'])) {
             display: block;
             float: left;
             width: 70px;
+            color: white;
         }
     </style>
 </head>

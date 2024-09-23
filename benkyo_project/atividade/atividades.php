@@ -21,6 +21,7 @@ $atividades = $stmt->fetchAll(PDO::FETCH_ASSOC);
         table {
             width: 100%;
             border-collapse: collapse;
+            color: white;
         }
         th, td {
             border: 1px solid #ddd;
@@ -29,6 +30,7 @@ $atividades = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         th {
             background-color: #f2f2f2; 
+            color: black;
         }
         
     </style>
