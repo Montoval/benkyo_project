@@ -39,20 +39,17 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
         <div class="container">
             <div class="box">
                 <div class="menuP">
+                    <div class='boxleft'>
                     <div class="perfil">
                         <h1>Perfil do Usuário</h1>
-                        <div class="imgperfil">  <label>
-        <input type="radio" name="img_predefinida" value="imagens/predefinida1.jpg">
-        <img src="imagens/predefinida1.jpg" alt="Imagem 1" class="img-selecionavel">
-    </label></div>
+                        <div class="imgperfil1">  </div>
                         
                         <h3 ><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></h3>
-                        <h3><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></h3>
-                        
+                        <h3><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></h3>                        
                     
                     </div>
-                <div class = "alterar">
-                    <div class="editar">
+                    <div class = "alterar">
+                        <div class="editar">
                         <h1>Editar Perfil</h1>
                         <form action="updateperfil.php" method="post">
                             <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user['id']); ?>">
@@ -65,7 +62,16 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                         </form>
                     </div>
                 </div>
-            </div>
+                </div>
+                <div class="imgperfil">
+                    <div class='geral'>
+                        <div class='img1'><img src="imagens/image1.png" alt="Imagem de Perfil 1" onclick="selectImage('imagens/image1.png')"></div>
+                        <div class='img2'><img src="images/profiles/image2.jpg" alt="Imagem de Perfil 2" onclick="selectImage('imagens/perfil/image2.jpg')"></div>
+                        <div class='img3'><img src="images/profiles/image3.jpg" alt="Imagem de Perfil 3" onclick="selectImage('imagens/perfil/image3.jpg')"></div>
+                    </div>
+                </div>
+                </div>
+            
                 <footer class="footer-fix">
                     <div class="waves">
                         <div class="wave" id="wave1"></div>
