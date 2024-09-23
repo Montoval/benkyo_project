@@ -41,8 +41,11 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 <div class="menuP">
                     <div class="perfil">
                         <h1>Perfil do Usuário</h1>
-                        <div class="imgperfil"></div>
-                        <div class ="trocaperfil"></div>
+                        <div class="imgperfil">  <label>
+        <input type="radio" name="img_predefinida" value="imagens/predefinida1.jpg">
+        <img src="imagens/predefinida1.jpg" alt="Imagem 1" class="img-selecionavel">
+    </label></div>
+                        
                         <h3 ><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></h3>
                         <h3><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></h3>
                         
