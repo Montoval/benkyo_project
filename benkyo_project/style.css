@@ -21,6 +21,19 @@ body{
     /* background-size: 100%; */
     background-size: cover;
 }
+.box-right1{
+    position: flex;
+    height: 100vh;
+    width: 60%;
+    border: 2px black solid;
+    background-color: #292929;
+    color: white;
+    float:right;
+    background-image:url(imagens/lofi2.jpg);
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-size: cover;
+}
 .box-right{
     position: flex;
     background-color: gray;

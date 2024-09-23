@@ -7,12 +7,10 @@
     <link rel="icon" type="image/x-icon" href="imagens/Benkyoicon2.jpg">
 </head>
 <body>
+    <div class="box-right1"></div>
     <div class="box-center">
     <div class="up-box">
-    <a href='cadastro.php'>Inicial</a> 
-		|
-		<a href='pesquisa.php'>Pesquisa</a>
-        |
+
 		<a href='index.php'>Voltar</a>
 		<br>
 <h3 align="center">Cadastro de Usuário</h3>
