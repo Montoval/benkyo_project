@@ -9,6 +9,11 @@ body{
     width: 100%;
     border: 2px black solid;
 }
+/* video{ */
+    /* width: 100%; */
+    /* height: 100%; */
+/* } */
+
 .box-left{
     position: absolute;
     height: 100vh;
@@ -66,7 +71,7 @@ h3{
     color:aliceblue;
 }
 label{
-    padding-right: 10px;
+    padding-right: 15px;
     width: 70px;
     padding-bottom:15px ;
     display: inline-block;
@@ -80,7 +85,7 @@ input{
     border-radius: 5px;
     border:solid black 1px ;
     width: 200px;
-    height:20px;
+    height:25px;
 }
 
 table{
@@ -113,9 +118,12 @@ button {
     border: 1px dotted #ccc; 
 }
 .botao{
-    /* margin-left: auto;
-    margin-right: auto; */
-    justify-content: center;
+    
+    
+    /* margin-left: auto; */
+    margin-right: auto; 
+    
+    
 }
 h1{
     float:left;
