@@ -82,14 +82,14 @@ p{
   box-shadow: 2px 2px 8px black;
   border-radius: 10px;
   margin-bottom: 10px;
-  margin: auto;
+  margin-left: 100px;
   text-align: center;
 
   
 }
 
 
-    .imgperfil {
+    .imgperfil1 {
         width: 200px;
         height: 200px;
         padding-top: 250px;
@@ -102,7 +102,7 @@ p{
     }
     
     
-    .imgperfil::after {
+    .imgperfil1.box {
         content: ""; 
         position: absolute;
         top: 0;
@@ -117,7 +117,7 @@ p{
         scale: 1.5;
     }
     
-    .imgperfil:hover::after {
+    .imgperfil1:hover::after {
         opacity: 1; /* Torna a sobreposição visível quando o mouse passa por cima */
     }
 
@@ -410,9 +410,37 @@ h3{
   box-shadow: 2px 2px 8px black;
   border-radius: 10px;
   margin-bottom: 10px;
-  margin: auto;
+  margin-left: 100px;
   text-align: center;
   line-height: 2.0; 
   margin-top: 30px;
   color: white;
 }
+.imgperfil{
+  height: 735px;
+  width: 500px;
+  padding-top: 15px;
+  /* background-color: rgba(43, 43, 43, 0.938); */
+  background-color: rgba(71, 50, 71, 0.808);
+  box-shadow: 2px 2px 8px black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 80px;
+  text-align: center;
+  line-height: 2.0; 
+  margin-top: 30px;
+  color: white;
+  float:left;
+  
+}
+
+.boxleft{
+  width: 600px;
+  height: 800px;
+  float: left;
+  margin-top: 30px;
+}
+  .img1{
+     width: 30px;
+     height: 20px;  
+  }
