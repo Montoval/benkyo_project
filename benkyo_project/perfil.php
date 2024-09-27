@@ -15,7 +15,6 @@ if (!isset($_SESSION['user_id'])) {
         'image1.png', 
         'image2.png',    
         'image3.png', 
-        'image4.png', 
         'image5.png', 
         'image6.png', 
         'image7.png', 
