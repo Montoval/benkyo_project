@@ -9,14 +9,12 @@
 <body>
     
 <div class="box">
-<<<<<<< HEAD
     <div class="box-left"></div>
     <!-- <video autoplay loop src="lofi2.mp4"></video> -->
-=======
     <div class="box-left">
         <h1>Benkyo</h1>
     </div>
->>>>>>> baec851c802df9ffcb88e55d560457ecb64f6175
+
     <div class="box-right">
         <div class="box-center">
             <h3 align="center">Login de Usuário</h3>
