@@ -7,6 +7,36 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+
+    $image_directory = 'imagens/';
+    
+    // Lista de imagens disponíveis
+    $images = [
+        'perfil.png',
+        'image1.png',    
+    ];
+    
+    // Escolhe uma imagem aleatória
+    $random_image = $images[array_rand($images)];
+    
+    // Salva a imagem escolhida na sessão (ou banco de dados, se preferir)
+    $_SESSION['perfil_imagem'] = $random_image;
+    
+    // Caminho completo da imagem
+    $image_path = $image_directory . $_SESSION['perfil_imagem'];
+    
+    // Exibe a imagem no perfil do usuário
+ 
+    
+    // Opcional: se você quiser armazenar no banco de dados
+    // $pdo = new PDO('mysql:host=localhost;dbname=nome_do_banco', 'usuario', 'senha');
+    // $query = "UPDATE usuarios SET perfil_imagem = :perfil_imagem WHERE id = :user_id";
+    // $stmt = $pdo->prepare($query);
+    // $stmt->execute(['perfil_imagem' => $random_image, 'user_id' => $_SESSION['user_id']]);
+
+
+
+
 // Conecte-se ao banco de dados
 $pdo = new PDO('mysql:host=localhost;dbname=benkyo_project', 'root', 'vertrigo');
 
@@ -42,7 +72,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                     <div class='boxleft'>
                     <div class="perfil">
                         <h1>Perfil do Usuário</h1>
-                        <div class="imgperfil1">  </div>
+                        <div class="imgperfil1">  <img src="<?= $image_path ?>" alt="Imagem de Perfil"> </div>
                         
                         <h3 ><strong>Nome:</strong> <?php echo htmlspecialchars($user['nome']); ?></h3>
                         <h3><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></h3>                        
@@ -65,10 +95,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 </div>
                 <div class="imgperfil">
                         <div class='geral'>
-                            <div class='img1'><img src="imagens/image1.png" alt="Imagem de Perfil 1" onclick="selectImage('imagens/image1.png')"></div>
-                            <div class='img2'><img src="images/profiles/image2.jpg" alt="Imagem de Perfil 2" onclick="selectImage('imagens/perfil/image2.jpg')"></div>
-                            <div class='img3'><img src="images/profiles/image3.jpg" alt="Imagem de Perfil 3" onclick="selectImage('imagens/perfil/image3.jpg')"></div>
-                        </div>
+                           </div>
                                 <script>
                                         function selectImage(imagens) {                                           
                                             document.getElementById('imagens').src = imagens/   ;
