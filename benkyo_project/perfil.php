@@ -72,7 +72,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                                 <script>
                                         function selectImage(imagens) {                                           
                                             document.getElementById('imagens').src = imagens/   ;
-                                            document.getElementById('selected-image-input').value = imagePath;
+                                            document.getElementById('selected-imagens-input').value = imagens;
                                         }
                                 </script>
                 </div>
