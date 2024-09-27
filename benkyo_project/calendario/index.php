@@ -246,9 +246,9 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
             </select><br>
             <div id="box-butao">
                 <button class="butao" type="submit">Adicionar Evento</button>
+                <button class="butao" onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
+                </div>
         </form>
-        <button class="butao" onclick="window.location.href='calendario/all_events.php'">Ver Todos os Eventos</button>
-        </div>
     </div>
 </body>
 </html>

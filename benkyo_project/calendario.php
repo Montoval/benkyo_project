@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Perfil</title>
+    <title>Calendário</title>
     <link rel="stylesheet" href="styleP.css">
     <link rel="icon" type="image/x-icon" href="imagens/Benkyoicon2.jpg">
 </head>
