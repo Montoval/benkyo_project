@@ -36,4 +36,5 @@ if ($resultado) {
     echo "<p>Usuário e/ou Senha Inválidos!</p>";
     echo "<a href='index.php'>Voltar</a>";
 }
+
 ?>

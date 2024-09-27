@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Perfil</title>
@@ -12,6 +13,8 @@
         <a href="calendario.php" class="active">Calendário</a>
         <a href="atividades.php">Atividades</a>
         <a href="perfil.php">Perfil</a>
+        
+
     </nav>
     <main>
         <div class="container">

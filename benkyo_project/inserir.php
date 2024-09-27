@@ -17,6 +17,7 @@
         $stm->execute();
         $result = $stm->fetch(PDO::FETCH_ASSOC);
 
+
         if ($email == "" || $email == null) {
             echo "<script>
                 alert('O campo email deve ser preenchido');

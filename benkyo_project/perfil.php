@@ -12,13 +12,20 @@ if (!isset($_SESSION['user_id'])) {
     
     // Lista de imagens disponíveis
     $images = [
-        'perfil.png',
-        'image1.png',    
+        'image1.png', 
+        'image2.png',    
+        'image3.png', 
+        'image4.png', 
+        'image5.png', 
+        'image6.png', 
+        'image7.png', 
+    
+    
     ];
     
     // Escolhe uma imagem aleatória
     $random_image = $images[array_rand($images)];
-    
+  
     // Salva a imagem escolhida na sessão (ou banco de dados, se preferir)
     $_SESSION['perfil_imagem'] = $random_image;
     
