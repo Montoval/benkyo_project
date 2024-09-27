@@ -2,12 +2,13 @@ body{
     height: 100%;
     margin: 0;
     overflow: hidden;
+
 }
 .box{
     display: inline-block;
     height: 100vh;
     width: 100%;
-    border: 2px black solid;
+    /* border: 2px black solid; */
 }
 /* video{ */
     /* width: 100%; */
@@ -18,7 +19,7 @@ body{
     position: absolute;
     height: 100vh;
     width: 60%;
-    border: 2px black solid;
+    /* border: 2px white solid; */
     background-color: #292929;
     color: white;
     background-image:url(imagens/lofi2.jpg);
@@ -30,7 +31,7 @@ body{
     position: flex;
     height: 100vh;
     width: 60%;
-    border: 2px black solid;
+    border: 2px white solid;
     background-color: #292929;
     color: white;
     float:right;
@@ -41,7 +42,8 @@ body{
 }
 .box-right{
     position: flex;
-    background-color: rgb(15, 18, 46);
+    background: linear-gradient(to right, rgb(61, 41, 110), rgba(15, 18, 46,1));
+    /* background-color: rgb(15, 18, 46); */
     height: 100vh;
     width: 40%; 
     float: right;
@@ -53,10 +55,10 @@ body{
     border: 2px black solid; */
 }
 .box-center{
-    background-color: rgb(15, 18, 46);;
+    /* background-color: rgb(15, 18, 46); */
     margin-top: 0px;
     text-align: center;
-    border: 1px solid;
+    /* border: px solid white; */
     height: 100vh;
     width: 100%;
     /* left: 50%;
