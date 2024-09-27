@@ -64,12 +64,19 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                 </div>
                 </div>
                 <div class="imgperfil">
-                    <div class='geral'>
-                        <div class='img1'><img src="imagens/image1.png" alt="Imagem de Perfil 1" onclick="selectImage('imagens/image1.png')"></div>
-                        <div class='img2'><img src="images/profiles/image2.jpg" alt="Imagem de Perfil 2" onclick="selectImage('imagens/perfil/image2.jpg')"></div>
-                        <div class='img3'><img src="images/profiles/image3.jpg" alt="Imagem de Perfil 3" onclick="selectImage('imagens/perfil/image3.jpg')"></div>
-                    </div>
+                        <div class='geral'>
+                            <div class='img1'><img src="imagens/image1.png" alt="Imagem de Perfil 1" onclick="selectImage('imagens/image1.png')"></div>
+                            <div class='img2'><img src="images/profiles/image2.jpg" alt="Imagem de Perfil 2" onclick="selectImage('imagens/perfil/image2.jpg')"></div>
+                            <div class='img3'><img src="images/profiles/image3.jpg" alt="Imagem de Perfil 3" onclick="selectImage('imagens/perfil/image3.jpg')"></div>
+                        </div>
+                                <script>
+                                        function selectImage(imagens) {                                           
+                                            document.getElementById('imagens').src = imagens/   ;
+                                            document.getElementById('selected-image-input').value = imagePath;
+                                        }
+                                </script>
                 </div>
+
                 </div>
             
                 <footer class="footer-fix">
