@@ -3,6 +3,7 @@
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $hash=password_hash($senha,PASSWORD_DEFAULT);
 
     try {
         // Conecta com BD
@@ -55,15 +56,16 @@
              }
             }
                 // Insere no BD
-                $sql = "INSERT INTO usuario (nome, email, senha) VALUES(?, ?, ?)";
+                $sql = "INSERT INTO usuario (nome, email, senha, rb) VALUES(?, ?, ?, ?)";
                 $stm = $con->prepare($sql);
-                $stm->execute(array($nome, $email, $senha));
+                $stm->execute(array($nome, $email, $hash, $senha));
 
                 // Verificar inserção
                 if ($stm) {
                     header("Location: index.php");
                 } else {
-                    echo "<p>Erro ao inserir</p>";                }
+                    echo "<p>Erro ao inserir</p>";              
+                }
             }
     catch (PDOException $e) {
         echo 'Erro: ' . $e->getMessage();

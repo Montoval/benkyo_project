@@ -12,16 +12,16 @@ $user = 'root';
 $pass = 'vertrigo';
 $db = new PDO($datasource, $user, $pass);
 
-// Consulta SQL para verificar o usuário e senha
-$query = "SELECT id, nome FROM usuario WHERE nome = ? AND senha = ?";
+// Consulta SQL para verificar o usuário
+$query = "SELECT id, nome, senha FROM usuario WHERE nome = ?";
 $stm = $db->prepare($query);
 $stm->bindParam(1, $nome);
-$stm->bindParam(2, $senha);
 $stm->execute();
 
 // Verifica se um usuário foi encontrado
 $resultado = $stm->fetch(PDO::FETCH_ASSOC);
-if ($resultado) {
+
+if ($resultado && password_verify($senha, $resultado['senha'])) {
     // Login efetuado com sucesso.
 
     // Armazenando o ID e o nome do usuário na sessão
@@ -36,5 +36,4 @@ if ($resultado) {
     echo "<p>Usuário e/ou Senha Inválidos!</p>";
     echo "<a href='index.php'>Voltar</a>";
 }
-
 ?>
