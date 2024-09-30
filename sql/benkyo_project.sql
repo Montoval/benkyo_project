@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 23-Set-2024 às 12:07
+-- Generation Time: 30-Set-2024 às 12:41
 -- Versão do servidor: 5.7.25
 -- versão do PHP: 7.1.26
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `benkyo_project`
 --
-CREATE DATABASE IF NOT EXISTS `benkyo_project` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `benkyo_project`;
 
 -- --------------------------------------------------------
 
@@ -30,7 +28,6 @@ USE `benkyo_project`;
 -- Estrutura da tabela `atividade`
 --
 
-DROP TABLE IF EXISTS `atividade`;
 CREATE TABLE `atividade` (
   `idAtividade` int(11) NOT NULL,
   `idUsuario` int(11) NOT NULL,
@@ -55,7 +52,6 @@ INSERT INTO `atividade` (`idAtividade`, `idUsuario`, `descricaoAtividade`, `tipo
 -- Estrutura da tabela `evento`
 --
 
-DROP TABLE IF EXISTS `evento`;
 CREATE TABLE `evento` (
   `idEvento` int(11) NOT NULL,
   `idUsuario` int(11) NOT NULL,
@@ -84,21 +80,22 @@ INSERT INTO `evento` (`idEvento`, `idUsuario`, `idAtividade`, `dataEvento`, `hor
 -- Estrutura da tabela `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `senha` varchar(255) NOT NULL
+  `senha` varchar(255) NOT NULL,
+  `rb` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
-(25, 'GAMERBR', 'victor@gmail.com', '123'),
-(26, 'kawachi', 'kawachi@gmail.com', '123');
+INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `rb`) VALUES
+(25, 'GAMERBR', 'victor@gmail.com', '123', ''),
+(26, 'kawachi', 'kawachi@gmail.com', '123', ''),
+(27, 'teste', 'limasT@gmail.com', '$2y$10$H1QoxvRbIMHkxxaRDhjpoeuw7nJfcYhTdOQDQSlD0zI1bnnyQgZIK', 'issao123');
 
 --
 -- Indexes for dumped tables
@@ -145,7 +142,7 @@ ALTER TABLE `evento`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
