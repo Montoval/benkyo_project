@@ -6,16 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="imagens/Benkyoicon2.jpg">
     <style>
-        .input-container {
-            position: relative;
-            margin-bottom: 10px;
-        }
-        .show-password {
-            position: absolute;
-            top: 8px;
-            right: 10px;
-            cursor: pointer;
-        }
+        
     </style>
 </head>
 <body>
