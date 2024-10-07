@@ -10,4 +10,4 @@ $stmt->execute();
 
 header("Location: atividades.php");
 exit();
-?>
+?>aaaa
