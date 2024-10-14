@@ -72,7 +72,7 @@ if (isset($_SESSION['user_id'])) {
 </head>
 <body>
     <div class="box-atividades">
-        <h1>Adicionar Atividade</h1>
+        <h1>Adicionar Atividade</h1><br><br>
         <form method="post">
             <label for="descricaoAtividade">Descrição:</label>
             <input type="text" id="descricaoAtividade" name="descricaoAtividade" required><br><br>
