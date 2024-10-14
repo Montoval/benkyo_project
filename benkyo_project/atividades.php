@@ -18,10 +18,10 @@
             <div class="box">
                 <div class="menuP">
 
-                  <div class="sugestoes">
+                  <div class="box-atividade">
                    
                     <?php
-                    include "atividade/atividades.php";
+                    include "atividade/atividade.php";
                     ?>
                   </div>
                   
