@@ -44,7 +44,7 @@ if (isset($_SESSION['user_id'])) {
             align-items: center;
         }
         h1{
-            color: black;
+            color: white;
         }
         input{
             width: 500px;
