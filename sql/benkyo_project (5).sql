@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 30-Set-2024 às 12:41
+-- Generation Time: 14-Out-2024 às 11:27
 -- Versão do servidor: 5.7.25
 -- versão do PHP: 7.1.26
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `benkyo_project`
 --
+CREATE DATABASE IF NOT EXISTS `benkyo_project` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `benkyo_project`;
 
 -- --------------------------------------------------------
 
@@ -28,6 +30,7 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `atividade`
 --
 
+DROP TABLE IF EXISTS `atividade`;
 CREATE TABLE `atividade` (
   `idAtividade` int(11) NOT NULL,
   `idUsuario` int(11) NOT NULL,
@@ -52,6 +55,7 @@ INSERT INTO `atividade` (`idAtividade`, `idUsuario`, `descricaoAtividade`, `tipo
 -- Estrutura da tabela `evento`
 --
 
+DROP TABLE IF EXISTS `evento`;
 CREATE TABLE `evento` (
   `idEvento` int(11) NOT NULL,
   `idUsuario` int(11) NOT NULL,
@@ -80,6 +84,7 @@ INSERT INTO `evento` (`idEvento`, `idUsuario`, `idAtividade`, `dataEvento`, `hor
 -- Estrutura da tabela `usuario`
 --
 
+DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
