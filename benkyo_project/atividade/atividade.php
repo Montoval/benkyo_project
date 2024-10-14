@@ -46,6 +46,20 @@ $atividades = $stmt->fetchAll(PDO::FETCH_ASSOC);
         border-radius: 10px;
         margin-bottom: 10px;
     }
+    .box-atividades{   
+            height:fit-content;
+            width: 80%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            padding: 5px;
+            border-radius: 15px;
+            margin-top: 30px;
+            backdrop-filter: blur(6px);
+            border: 3px solid rgba(255,255,255,0.6);
+            align-items: center;
+        }
     </style>
 </head>
 

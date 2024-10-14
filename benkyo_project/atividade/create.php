@@ -31,28 +31,27 @@ if (isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <title>Adicionar Atividade</title>
     <style>
-        .box-atividades{   
-            height:fit-content;
-            width:fit-content;
-            background-color: rgba(0, 0, 0, 0.4);
-            margin: auto;
-            background-color: rgba(0,0,0,0.5);
-            border-radius: 10px;
-            padding: 5px;
-            border-radius: 15px;
-            margin-top: 30px;
-            align-items: center;
-        }
-        h1{
+        
+        /*h1{
             color: black;
+        }*/
+        input {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            border-radius: 7px;
         }
-        input{
-            width: 500px;
-            border-radius: 10px;
-        }
-        select{
-            width: 500px;   
-            border-radius: 10px;
+
+        
+
+        select{ 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            border-radius: 7px;
+
         }
         button{
             display: block; /* Necessário para o margin funcionar */
@@ -61,7 +60,7 @@ if (isset($_SESSION['user_id'])) {
             margin-top: 10px;
             border-radius: 10px;
             border: black solid;
-            width: 100px
+            width: 100px;
         }
         label{
             display: block;
@@ -75,15 +74,15 @@ if (isset($_SESSION['user_id'])) {
     <div class="box-atividades">
         <h1>Adicionar Atividade</h1>
         <form method="post">
-            <label for="descricaoAtividade">Descrição:</label><br>
-            <input type="text" id="descricaoAtividade" name="descricaoAtividade" required><br>
-            <label for="tipoAtividade">Tipo:</label><br>
+            <label for="descricaoAtividade">Descrição:</label>
+            <input type="text" id="descricaoAtividade" name="descricaoAtividade" required><br><br>
+            <label for="tipoAtividade">Tipo:</label>
             <select id="tipoAtividade" name="tipoAtividade" required>
                 <option value="Comemorativa">Comemorativa</option>
                 <option value="Esportes">Esportes</option>
                 <option value="Estudos">Estudos</option>
                 <option value="Outros">Outros</option>
-            </select><br>
+            </select><br><br>
             <button type="submit">Adicionar</button>
         </form>
     </div>
