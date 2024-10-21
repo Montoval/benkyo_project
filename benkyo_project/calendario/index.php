@@ -122,6 +122,7 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
         }
 
         label {
+            color: white;
             display: block;
             float: left;
             width: 70px;
