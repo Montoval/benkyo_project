@@ -93,14 +93,13 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                             <input type="text" id="nome" name="nome" value="<?php echo htmlspecialchars($user['nome']); ?>" required><br>
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required><br>
-                            <button type="submit">Atualizar</button>
-                            <a href="logout.php">Sair</a>
+                            <button type="submit" >Atualizar</button>
+                            <a href="logout.php" class="sair">Sair</a>
                         </form>
                     </div>
                 </div>
                 </div>
-                <div class="imgperfil">
-                        <div class='geral'>
+                                        <div class='geral'>
                            </div>
                                 <script>
                                         function selectImage(imagens) {                                           
@@ -108,7 +107,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
                                             document.getElementById('selected-imagens-input').value = imagens;
                                         }
                                 </script>
-                </div>
+                
 
                 </div>
             

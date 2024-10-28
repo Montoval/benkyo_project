@@ -70,20 +70,24 @@ p{
     /* border: 2px solid black; */
     box-shadow: 2px 2px 8px black;
     border-radius: 10px;
-
+    
 }
 
 .perfil{
   height: 500px;
   width: 500px;
-  padding-top: 25px;
+
   /* background-color: rgba(43, 43, 43, 0.938); */
   background-color: rgba(71, 50, 71, 0.808);
   box-shadow: 2px 2px 8px black;
   border-radius: 10px;
-  margin-bottom: 10px;
-  margin-left: 100px;
+ 
+  
   text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 
   
 }
@@ -405,43 +409,53 @@ h3{
 .alterar{
   height: 200px;
   width: 500px;
-  padding-top: 15px;
+  padding-top: 5px;
   /* background-color: rgba(43, 43, 43, 0.938); */
   background-color: rgba(71, 50, 71, 0.808);
   box-shadow: 2px 2px 8px black;
   border-radius: 10px;
   margin-bottom: 10px;
-  margin-left: 100px;
   text-align: center;
   line-height: 2.0; 
   margin-top: 30px;
   color: white;
-}
-.imgperfil{
-  height: 735px;
-  width: 500px;
-  padding-top: 15px;
-  /* background-color: rgba(43, 43, 43, 0.938); */
-  background-color: rgba(71, 50, 71, 0.808);
-  box-shadow: 2px 2px 8px black;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin-left: 80px;
-  text-align: center;
-  line-height: 2.0; 
-  margin-top: 30px;
-  color: white;
-  float:left;
-  
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .boxleft{
   width: 600px;
   height: 800px;
-  float: left;
+  
   margin-top: 30px;
 }
   .img1{
      width: 30px;
      height: 20px;  
   }
+button{
+  
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 10px 15px;
+    text-align: center;
+
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+   
+}
+.sair{
+  background-color: red;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+  padding:7px 7px ;
+  border-radius: 10px;
+ 
+}
