@@ -182,7 +182,7 @@ $monthName = isset($months[$month]) ? $months[$month] : "Mês Inválido";
     <h1>Calendário de Eventos</h1>
     <h2><?= $monthName ?> de <?= $year ?></h2> <!-- Exibe o mês e o ano atuais em português -->
     <a class=pag href="?month=<?= $month == 1 ? 12 : $month - 1 ?>&year=<?= $month == 1 ? $year - 1 : $year ?>">Anterior</a>
-    <a id="prox" href="?month=<?= $month == 12 ? 1 : $month + 1 ?>&year=<?= $month == 12 ? $year + 1 : $year ?>">Próximo</a>
+    <a class=pag id="prox" href="?month=<?= $month == 12 ? 1 : $month + 1 ?>&year=<?= $month == 12 ? $year + 1 : $year ?>">Próximo</a>
     
     <table class="calendar">
         <tr>
