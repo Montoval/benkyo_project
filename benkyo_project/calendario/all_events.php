@@ -117,7 +117,7 @@ $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="wave" id="wave4"></div>
                     </div>
                     <ul class="social-icon">
-                        <li class="social-icon__item"><a class="social-icon__link" href="#">
+                        <li class="social-icon__item"><a class="social-icon__link" href="../insta.php">
                                 <ion-icon name="logo-instagram"></ion-icon>
                             </a></li>
                     </ul>
