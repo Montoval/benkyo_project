@@ -21,14 +21,13 @@
         <div class="menuP">
 
           <div class="sugestoes">
-            <h1>Sugestões</h1><br>
-            <p id="sugestoes_text"> Aqui deixaremos algumas sugestões de coisas de estudos, como cursos, video aulas,
-              matérias importantes para vestibulares </p>
+            <h1>Instagram</h1><br>
+            <p id="sugestoes_text"> Aqui está os Instagram dos desenvolvedores desse site! </p>
           </div>
           <div class="sugestoes-box">
             <div id="sugestoes-row1">
               <div class="curso1">
-                <h1><a target="_blank" href="https://descomplica.com.br/vestibulares/enem/a/">Descomplica</a></h1>
+                <h1><a target="_blank" href="https://www.instagram.com/ryumiwaa/">RYU</a></h1>
                 <br><br>
                 <p>
                   A plataforma oferecida pela faculdade é simplesmente excelente, é super amigável e intuitiva, o que
@@ -36,7 +35,7 @@
                   também merecem elogios.</p>
               </div>
               <div class="curso2">
-                <h1><a target="_blank" href="https://www.professorferretto.com.br">Ferreto</a></h1>
+                <h1><a target="_blank" href="https://www.instagram.com/_joaovictor0015/">JOÃO</a></h1>
                 <br><br>
                 <p>
                   Visite o site do Professor Ferreto para acessar conteúdos educativos de alta qualidade, dicas valiosas
@@ -47,7 +46,7 @@
                 </p>
               </div>
               <div class="curso3">
-                <h1><a target="_blank" href="https://pt.khanacademy.org">Khan Academy</a></h1>
+                <h1><a target="_blank" href="https://www.instagram.com/gamerbr109/">VICTOR</a></h1>
                 <br><br>
                 <p>
                   A Khan Academy oferece videoaulas, exercícios e recursos gratuitos em diversas disciplinas,
@@ -58,7 +57,7 @@
             </div>
             <div id="sugestoes-row2">
               <div class="curso4">
-                <h1><a target="_blank" href="https://kultivi.com/cursos/enem#google_vignette">Kultivi</a></h1>
+                <h1><a target="_blank" href="https://www.instagram.com/m0ntoval/">ISSAO</a></h1>
                 <br><br>
                 <p>
                   O Kultivi oferece uma variedade de recursos educacionais, como videoaulas, materiais de estudo e
@@ -69,7 +68,7 @@
                 </p>
               </div>
               <div class="curso5">
-                <h1><a target="_blank" href="https://www.mesalva.com">MeSalva</a></h1>
+                <h1><a target="_blank" href="https://www.instagram.com/kawachivitor/">KAWACHI</a></h1>
                 <br><br>
                 <p>
                   O MeSalva oferece uma ampla gama de recursos educacionais, incluindo videoaulas,
@@ -94,10 +93,7 @@
               </div>
             </div>
           </div>
-          <div class="complementar">
-            <p>Aqui vai ser um espaço para um player do youtube que vai ter o video mostrando todo o nosso site e como
-              ele funciona.</p>
-          </div>
+          
         </div>
 
         <footer class="footer-fix">
@@ -108,7 +104,7 @@
             <div class="wave" id="wave4"></div>
           </div>
           <ul class="social-icon">
-            <li class="social-icon__item"><a class="social-icon__link" href="insta.php">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a></li>
           </ul>
