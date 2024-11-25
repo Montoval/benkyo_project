@@ -114,6 +114,7 @@ h1{
   padding: 5px ;
   height: 50%;
   width: 100%;
+
 }
 
 #sugestoes-row2{
@@ -138,6 +139,7 @@ p{
   border-radius: 15px;
   /* background-color: rgba(0, 128, 0, 0.486); */
   background-color: #AC99F2;
+ 
 }
 .curso2{
   padding: 10px;
@@ -148,6 +150,7 @@ p{
   border: 3px solid white;
   border-radius: 15px;
   background-color: #9abbe6;
+ 
   /* background-color: rgba(0, 66, 128, 0.486); */
 }
 .curso3{
@@ -159,6 +162,7 @@ p{
   border: 2px solid black;
   border-radius: 15px;
   background-color: #AC99F2;
+
   /* background-color: rgba(113, 0, 128, 0.486); */
 }
 .curso4{
@@ -171,6 +175,7 @@ p{
   border: 3px solid white;
   border-radius: 15px;
   background-color: #9abbe6;
+  
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .curso5{
@@ -182,6 +187,7 @@ p{
   border: 2px solid black;
   border-radius: 15px;
   background-color: #AC99F2;
+ 
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .curso6{
@@ -195,6 +201,76 @@ p{
   background-color: #9abbe6;
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
+.insta1{
+  padding: 10px;
+  float: left;
+  text-align: justify;
+  height: 100%;
+  width: 33.333%;
+  border: 2px solid black;
+  border-radius: 15px;
+  /* background-color: rgba(0, 128, 0, 0.486); */
+  background-color: #AC99F2;
+  background-image: url(imagens/RYU.jpg);
+  background-position: center;
+}
+.insta2{
+  padding: 10px;
+  float: left;
+  text-align: justify;
+  height: 100%;
+  width: 33.333%;
+  border: 3px solid white;
+  border-radius: 15px;
+  background-color: #9abbe6;
+  background-image: url(imagens/Joao.jpg);
+  background-position: center;
+  /* background-color: rgba(0, 66, 128, 0.486); */
+}
+.insta3{
+  padding: 10px;
+  float: left;
+  text-align: justify;
+  height: 100%;
+  width: 33.333%;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #AC99F2;
+  background-image: url(imagens/malphoy.jpg);
+  background-position: center;
+  background-size: cover;
+  /* background-color: rgba(113, 0, 128, 0.486); */
+}
+.insta4{
+  padding: 10px;
+  float: left;
+  text-align: justify;
+
+  height: 100%;
+  width: 33.333%;
+  border: 3px solid white;
+  border-radius: 15px;
+  background-color: #9abbe6;
+  background-image: url(imagens/Limas.jpg);
+  background-position: center;
+  /* background-color: rgba(128, 0, 0, 0.486); */
+}
+.insta5{
+  padding: 10px;
+  float: left;
+  text-align: justify;
+  height: 100%;
+  width: 33.333%;
+  border: 2px solid black;
+  border-radius: 15px;
+  background-color: #AC99F2;
+  background-image: url(imagens/Kawachi.jpg);
+  background-position: center;
+  background-size: cover;
+  /* background-color: rgba(128, 0, 0, 0.486); */
+}
+
+
 
 
 .curso1, a{

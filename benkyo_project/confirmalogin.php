@@ -33,7 +33,11 @@ if ($resultado && password_verify($senha, $resultado['senha'])) {
     exit();  // Garantir que o script pare após o redirecionamento
 } else {
     // Caso usuário ou senha estejam incorretos.
-    echo "<p>Usuário e/ou Senha Inválidos!</p>";
+    echo "<script language='javascript'>
+    alert('Usuário ou Senha incorretos!');
+    window.location.href = 'index.php';  // Redireciona para a página index após o OK
+    </script>";
+   
     echo "<a href='index.php'>Voltar</a>";
 }
 ?>
