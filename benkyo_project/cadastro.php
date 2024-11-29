@@ -21,9 +21,27 @@
             <input name='email' type="text" id="email" placeholder="Seu E-mail"><br>
             <label>Senha: </label>
             <input name='senha' type="password" id="senha" placeholder="Sua Senha"><br>
+            <input type="checkbox" class="show-password" id="showPassword" onclick="togglePassword()">
+            <label>Senha: </label>
+            <input name='csenha' type="password" id="csenha" placeholder="Confirme Senha"><br>
+            <input type="checkbox" class="show-password" id="showPassword" onclick="togglePassword1()">
             <button type='submit' >Salvar</button>
         </form>
         </div>
     </div>
+    <script>
+function togglePassword() {
+    const passwordInput = document.getElementById('senha');
+    const showPasswordCheckbox = document.getElementById('showPassword');
+
+    passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+}
+function togglePassword1() {
+    const passwordInput = document.getElementById('csenha');
+    const showPasswordCheckbox = document.getElementById('showPassword');
+
+    passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
+}
+</script>
 </body>
 </html>
