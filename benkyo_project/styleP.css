@@ -124,6 +124,21 @@ h1{
   height: 50%;
   width: 100%;
 }
+#sugestoes-rowinsta2{
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);  */
+  width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+  padding: 5px;
+  /* border: 3px solid blue; */
+  height: 50%;
+  width: 100%;
+}
 /* 
 p{
   text-align: justify;
@@ -213,6 +228,7 @@ p{
   background-color: #AC99F2;
   background-image: url(imagens/RYU.jpg);
   background-position: center;
+  background-size: cover;
 }
 .insta2{
   padding: 10px;
@@ -225,6 +241,7 @@ p{
   background-color: #9abbe6;
   background-image: url(imagens/Joao.jpg);
   background-position: center;
+  background-size: cover;
   /* background-color: rgba(0, 66, 128, 0.486); */
 }
 .insta3{
@@ -253,6 +270,7 @@ p{
   background-color: #9abbe6;
   background-image: url(imagens/Limas.jpg);
   background-position: center;
+  background-size: cover;
   /* background-color: rgba(128, 0, 0, 0.486); */
 }
 .insta5{
