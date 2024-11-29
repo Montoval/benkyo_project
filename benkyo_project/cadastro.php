@@ -14,7 +14,7 @@
                 <a href='index.php'>Voltar</a>
                 <br>
         <h3 align="center">Cadastro de Usuário</h3>
-        <form method='POST' action='inserir.php'>
+        <form method='POST' action='inserir.php' onsubmit="return validarSenhas()">
             <label>Nome: </label>
             <input name='nome' placeholder="Seu Nome"><br>
             <label>Email: </label>
@@ -24,7 +24,7 @@
             <input type="checkbox" class="show-password" id="showPassword" onclick="togglePassword()">
             <label>Senha: </label>
             <input name='csenha' type="password" id="csenha" placeholder="Confirme Senha"><br>
-            <input type="checkbox" class="show-password" id="showPassword" onclick="togglePassword1()">
+            <input type="checkbox" class="show-password" id="showPassword1" onclick="togglePassword1()">
             <button type='submit' >Salvar</button>
         </form>
         </div>
@@ -38,10 +38,23 @@ function togglePassword() {
 }
 function togglePassword1() {
     const passwordInput = document.getElementById('csenha');
-    const showPasswordCheckbox = document.getElementById('showPassword');
+    const showPasswordCheckbox = document.getElementById('showPassword1');
 
     passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
 }
+function validarSenhas() {
+            // Obtem os valores das senhas
+            const senha = document.getElementById('senha').value;
+            const csenha = document.getElementById('csenha').value;
+
+            // Verifica se as senhas são iguais
+            if (senha !== csenha) {
+                alert('As senhas não conferem. Por favor, tente novamente.');
+                return false; // Impede o envio do formulário
+            }
+
+            return true; // Permite o envio do formulário
+        }
 </script>
 </body>
 </html>
