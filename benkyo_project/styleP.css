@@ -460,3 +460,21 @@ p{
     background-positon-x: 0px;
   }
 }
+
+.senha1{
+  height: 20px;
+}
+.senha2{
+
+
+}
+#senha{
+  /* position: absolute;
+  margin-left: 100px; */
+  display: flex;
+      justify-content: center; /* Alinha horizontalmente no centro */
+      align-items: center; /* Alinha verticalmente no centro */
+      height: 100px; /* Define a altura da div */
+      border: 1px solid #ccc;
+      padding: 10px;
+}

@@ -13,18 +13,18 @@
 
                 <a href='index.php'>Voltar</a>
                 <br>
-        <h3 align="center">Cadastro de Usuário</h3>
+        <h3 align ="center">Cadastro de Usuário</h3>
         <form method='POST' action='inserir.php' onsubmit="return validarSenhas()">
             <label>Nome: </label>
             <input name='nome' placeholder="Seu Nome"><br>
             <label>Email: </label>
             <input name='email' type="text" id="email" placeholder="Seu E-mail"><br>
-            <label>Senha: </label>
-            <input name='senha' type="password" id="senha" placeholder="Sua Senha"><br>
-            <input type="checkbox" class="show-password" id="showPassword" onclick="togglePassword()">
-            <label>Senha: </label>
-            <input name='csenha' type="password" id="csenha" placeholder="Confirme Senha"><br>
-            <input type="checkbox" class="show-password" id="showPassword1" onclick="togglePassword1()">
+            <div class="senha1"> <label>Senha: </label>
+                <input name='senha' type="password" id="senha" placeholder="Sua Senha">
+                <input type="checkbox" id="password" onclick="togglePassword()"><div>
+            <div class ="senha2"><label>Senha: </label> 
+                <input name='csenha' type="password" id="csenha" placeholder="Confirme Senha">
+                <input type="checkbox"  id="password1" onclick="togglePassword1()"><div>
             <button type='submit' >Salvar</button>
         </form>
         </div>
