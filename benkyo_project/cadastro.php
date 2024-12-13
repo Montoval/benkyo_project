@@ -32,13 +32,13 @@
     <script>
 function togglePassword() {
     const passwordInput = document.getElementById('senha');
-    const showPasswordCheckbox = document.getElementById('showPassword');
+    const showPasswordCheckbox = document.getElementById('password');
 
     passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
 }
 function togglePassword1() {
     const passwordInput = document.getElementById('csenha');
-    const showPasswordCheckbox = document.getElementById('showPassword1');
+    const showPasswordCheckbox = document.getElementById('password1');
 
     passwordInput.type = showPasswordCheckbox.checked ? 'text' : 'password';
 }
